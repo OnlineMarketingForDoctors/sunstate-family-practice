@@ -211,7 +211,16 @@
     if (focus) tab.focus();
   };
   svcTabs.forEach(function (t, i) {
-    t.addEventListener('click', function () { selectSvc(t); });
+    t.addEventListener('click', function () {
+      selectSvc(t);
+      /* on the stacked mobile layout the card sits below the list, so bring it into view */
+      if (window.matchMedia('(max-width: 960px)').matches) {
+        /* measure the container: the card itself is mid entrance animation */
+        var cards = document.querySelector('.svc__cards');
+        var top = cards.getBoundingClientRect().top + window.scrollY - header.offsetHeight - 16;
+        window.scrollTo({ top: top, behavior: reduceMotion ? 'auto' : 'smooth' });
+      }
+    });
     t.addEventListener('keydown', function (e) {
       var dir = { ArrowRight: 1, ArrowDown: 1, ArrowLeft: -1, ArrowUp: -1 }[e.key];
       if (dir) { e.preventDefault(); selectSvc(svcTabs[(i + dir + svcTabs.length) % svcTabs.length], true); }
