@@ -651,6 +651,16 @@ body.has-lightbox { overflow: hidden; }
 
 /* ---------- Communities (extends the LP local section) ---------- */
 .local__copy a { color: #fff; }
+/* photo fills the whole section; the jetty card hangs into the next section instead of leaving a white strip */
+.local { background: var(--mist); }
+.local__bg { inset: 0; }
+.local__sat { margin-bottom: -110px; }
+.local + .process { padding-top: calc(var(--sect) + 110px); }
+@media (max-width: 900px) {
+  .local__bg { bottom: 200px; }
+  .local__sat { margin-bottom: 0; }
+  .local + .process { padding-top: var(--sect); }
+}
 .suburb-chips { list-style: none; padding: 0; margin: 22px 0 0; display: flex; flex-wrap: wrap; gap: 10px; }
 .suburb-chips a {
   display: inline-block; padding: 9px 16px; border-radius: 999px; text-decoration: none;
