@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>{{ title }}</title>
+{% if description %}<meta name="description" content="{{ description }}">
+<meta property="og:description" content="{{ description }}">{% endif %}
+<meta property="og:title" content="{{ title }}">
+<link rel="icon" href="/assets/img/favicon.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,500;0,700;0,800;0,900;1,700&family=Red+Hat+Text:wght@400;500;700&display=swap" rel="stylesheet">
+{% if preload %}<link rel="preload" as="image" href="{{ preload }}">{% endif %}
+<link rel="stylesheet" href="/assets/styles.css">
+<script>document.documentElement.classList.add("js")</script>
+{% if jsonld %}<script type="application/ld+json">
+{{ jsonld }}
+</script>{% endif %}
+</head>
+<body{% if body_class %} class="{{ body_class }}"{% endif %}>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header" id="top" data-header>
+  <div class="hdr">
+    <a class="hdr__logo" href="/" aria-label="Sunstate Family Practice and Skin Cancer Clinic, home">
+      <img src="/assets/img/logo.webp" alt="Sunstate Family Practice &amp; Skin Cancer Clinic" width="1900" height="868">
+    </a>
+    <a class="btn btn--green hdr__booknow" href="{{ site.HOTDOC }}" target="_blank" rel="noopener">Book now</a>
+
+    <nav class="hdr__nav" id="site-nav" aria-label="Main">
+      <ul>
+        {% for item in site.NAV %}
+        <li{% if item.children %} class="has-sub"{% endif %}>
+          <a href="{{ item.href }}"{% if current_section == item.href %} class="is-current" aria-current="page"{% endif %}>{{ item.label }}</a>
+          {% if item.children %}
+          <button class="sub-toggle" type="button" aria-expanded="false" aria-label="Show {{ item.label }} pages"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.4 8.6L12 13.2l4.6-4.6L18 10l-6 6-6-6z"/></svg></button>
+          <ul class="sub">
+            {% for c in item.children %}<li><a href="{{ c.href }}">{{ c.label }}</a></li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+        </li>
+        {% endfor %}
+      </ul>
+      <div class="hdr__nav-cta">
+        <a class="btn btn--green" href="{{ site.HOTDOC }}" target="_blank" rel="noopener">Book online</a>
+        <a class="hdr__nav-phone" href="{{ site.TEL }}">Call {{ site.PHONE }}</a>
+      </div>
+    </nav>
+
+    <a class="hdr__phone" href="{{ site.TEL }}">
+      <span class="hdr__phone-label">Call us</span>
+      <span class="hdr__phone-num">{{ site.PHONE }}</span>
+    </a>
+    <a class="btn btn--green hdr__book" href="{{ site.HOTDOC }}" target="_blank" rel="noopener">Book online</a>
+
+    <div class="hdr__icons">
+      <a class="icon-btn" href="{{ site.TEL }}" aria-label="Call {{ site.PHONE }}">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1L6.6 10.8z"/></svg>
+      </a>
+      <button class="icon-btn hdr__burger" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Open menu" data-burger>
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+{% block main %}{% endblock %}
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__grid">
+    <div class="footer__brand">
+      <img src="/assets/img/logo.webp" alt="Sunstate Family Practice &amp; Skin Cancer Clinic" width="1900" height="868" loading="lazy">
+      <ul class="social">
+        <li><a href="https://www.facebook.com/SunstateFamilyPractice" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h3V4h-3c-2.8 0-4.5 1.8-4.5 4.6V11H7v4h2.5v9h4v-9h3l.5-4h-3.5V8.8c0-.5.3-.8.5-.8z"/></svg></a></li>
+        <li><a href="https://www.youtube.com/@SunstateFamilyPracticeandSkinC" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .6 12a31 31 0 0 0 .4 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .4-4.8 31 31 0 0 0-.4-4.8zM9.7 15.1V8.9l5.8 3.1-5.8 3.1z"/></svg></a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Contact</h3>
+      <p>127 Link Road, Victoria Point, QLD 4165<br><a href="{{ site.TEL }}">{{ site.PHONE }}</a><br>After Hours: <a href="tel:134100">134 100</a><br><a href="mailto:reception@sunstatefamilypractice.com.au">reception@sunstatefamilypractice.com.au</a></p>
+    </div>
+    <div>
+      <h3>Services</h3>
+      <ul class="footer__links">
+        <li><a href="/total-body-mapping-victoria-point/">Total body photography</a></li>
+        <li><a href="/chronic-disease-management/">Chronic Disease Management</a></li>
+        <li><a href="/ear-micro-suction/">Ear Micro Suction Victoria Point</a></li>
+        <li><a href="/total-body-mapping-victoria-point/">Mole Mapping</a></li>
+        <li><a href="/skin-checks/">Skin Cancer Checks</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Quick Links</h3>
+      <ul class="footer__links">
+        <li><a href="/privacy-policy/">Website Privacy Policy</a></li>
+        <li><a href="https://sunstatefamilypractice.com.au/wp-content/uploads/2025/08/Privacy-Policy-incl-AI.pdf" target="_blank" rel="noopener">Clinic Privacy Policy</a></li>
+        <li><a href="/fees/">Practice Fees</a></li>
+        <li><a href="/terms/">Terms</a></li>
+        <li><a href="/careers/">Careers</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer__areas">
+    <h3>Doctors near you</h3>
+    <ul>
+      {% for slug, s in site.SUBURBS.items() %}<li><a href="/{{ slug }}/">{{ s.name }} doctors</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="wrap footer__legal">
+    <div class="footer__legal-row">
+      <p class="disclaimer"><strong>Medical disclaimer.</strong> The information on this website is general in nature and is not a substitute for individual medical advice. Any surgical or invasive procedure, including biopsy and excision, carries risks. Before proceeding, you may wish to seek a second opinion from an appropriately qualified health practitioner. Some images on this website are illustrative.</p>
+      <img class="footer__agpal" src="/assets/img/agpal.webp" alt="Proudly AGPAL accredited: our commitment to your safety and care" width="694" height="262" loading="lazy">
+    </div>
+    <div class="footer__bottom">
+      <p>© <span data-year>2026</span> Sunstate Family Practice &amp; Skin Cancer Clinic</p>
+      <p>Powered by <a href="https://onlinemarketingfordoctors.com/" target="_blank" rel="noopener">Online Marketing For Doctors</a></p>
+    </div>
+  </div>
+</footer>
+
+<a class="to-top" href="#top" aria-label="Back to top" data-to-top>
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5l-7 7 1.4 1.4L11 8.8V20h2V8.8l4.6 4.6L19 12z"/></svg>
+</a>
+
+<div class="lightbox" data-lightbox hidden>
+  <div class="lightbox__backdrop" data-lightbox-close></div>
+  <div class="lightbox__dialog" role="dialog" aria-modal="true" aria-label="Video">
+    <button class="lightbox__close" type="button" data-lightbox-close aria-label="Close video">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.4 5L5 6.4 10.6 12 5 17.6 6.4 19l5.6-5.6 5.6 5.6 1.4-1.4-5.6-5.6L19 6.4 17.6 5 12 10.6z"/></svg>
+    </button>
+    <div class="lightbox__frame" data-lightbox-frame></div>
+  </div>
+</div>
+
+<script src="/assets/main.js" defer></script>
+</body>
+</html>

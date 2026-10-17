@@ -337,6 +337,105 @@
     update();
   }
 
+  /* ---------- Header dropdowns: tap to open on touch and in the mobile menu ---------- */
+  document.querySelectorAll('.sub-toggle').forEach(function (btn) {
+    var li = btn.closest('.has-sub');
+    btn.addEventListener('click', function () {
+      var open = !li.classList.contains('is-open');
+      document.querySelectorAll('.has-sub.is-open').forEach(function (x) { if (x !== li) { x.classList.remove('is-open'); x.querySelector('.sub-toggle').setAttribute('aria-expanded', 'false'); } });
+      li.classList.toggle('is-open', open);
+      btn.setAttribute('aria-expanded', String(open));
+    });
+  });
+  document.addEventListener('click', function (e) {
+    if (!e.target.closest('.has-sub')) document.querySelectorAll('.has-sub.is-open').forEach(function (x) { x.classList.remove('is-open'); x.querySelector('.sub-toggle').setAttribute('aria-expanded', 'false'); });
+  });
+
+  /* ---------- FAQ search ---------- */
+  var faqSearch = document.querySelector('[data-faq-search]');
+  if (faqSearch) {
+    var faqs = Array.prototype.slice.call(document.querySelectorAll('[data-faq]'));
+    var faqEmpty = document.querySelector('[data-faq-empty]');
+    faqSearch.addEventListener('input', function () {
+      var q = faqSearch.value.trim().toLowerCase();
+      var shown = 0;
+      faqs.forEach(function (d) {
+        var hit = !q || d.textContent.toLowerCase().indexOf(q) > -1;
+        d.hidden = !hit;
+        if (hit) shown++;
+        if (q && hit) d.open = true;
+      });
+      faqEmpty.hidden = shown > 0;
+    });
+    /* open the question a link points at, e.g. /faqs/#bulkbill */
+    if (location.hash) { var target = document.querySelector(location.hash); if (target && target.tagName === 'DETAILS') target.open = true; }
+  }
+
+  /* ---------- News: topic filter, search, show more ---------- */
+  var newsGrid = document.querySelector('[data-news-grid]');
+  if (newsGrid) {
+    var cards = Array.prototype.slice.call(newsGrid.querySelectorAll('.ncard'));
+    var chips = Array.prototype.slice.call(document.querySelectorAll('[data-topic-filter]'));
+    var newsSearch = document.querySelector('[data-news-search]');
+    var more = document.querySelector('[data-news-more]');
+    var newsEmpty = document.querySelector('[data-news-empty]');
+    var PAGE = 9, limit = PAGE, topic = 'all';
+    var render = function (animateFrom) {
+      var q = newsSearch.value.trim().toLowerCase();
+      var matches = cards.filter(function (c) {
+        return (topic === 'all' || c.dataset.topic === topic) && (!q || c.dataset.search.indexOf(q) > -1);
+      });
+      cards.forEach(function (c) { c.hidden = true; c.classList.remove('is-new'); });
+      matches.forEach(function (c, i) {
+        if (i < limit) { c.hidden = false; if (animateFrom !== undefined && i >= animateFrom) c.classList.add('is-new'); }
+      });
+      more.parentElement.hidden = matches.length <= limit;
+      newsEmpty.hidden = matches.length > 0;
+    };
+    chips.forEach(function (chip) {
+      chip.addEventListener('click', function () {
+        topic = chip.dataset.topicFilter;
+        chips.forEach(function (c) { var on = c === chip; c.classList.toggle('is-active', on); c.setAttribute('aria-pressed', String(on)); });
+        limit = PAGE; render();
+      });
+    });
+    newsSearch.addEventListener('input', function () { limit = PAGE; render(); });
+    more.addEventListener('click', function () { var from = limit; limit += PAGE; render(from); });
+    render();
+  }
+
+  /* ---------- YouTube playlist (loads player only on click) ---------- */
+  var yt = document.querySelector('[data-yt]');
+  if (yt) {
+    var thumb = yt.querySelector('[data-yt-thumb]');
+    var playBtn = yt.querySelector('[data-yt-play]');
+    var titleEl = document.querySelector('[data-yt-title]');
+    var list = Array.prototype.slice.call(document.querySelectorAll('[data-video]'));
+    var load = function (id, autoplay) {
+      var old = yt.querySelector('iframe');
+      if (old) old.remove();
+      if (!autoplay) return;
+      var f = document.createElement('iframe');
+      f.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0&modestbranding=1';
+      f.title = titleEl.textContent;
+      f.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+      f.allowFullscreen = true;
+      yt.appendChild(f);
+      playBtn.hidden = true;
+    };
+    playBtn.addEventListener('click', function () { load(yt.dataset.id, true); });
+    list.forEach(function (b) {
+      b.addEventListener('click', function () {
+        list.forEach(function (x) { x.classList.toggle('is-active', x === b); });
+        yt.dataset.id = b.dataset.video;
+        titleEl.textContent = b.querySelector('span').textContent;
+        thumb.src = 'https://i.ytimg.com/vi/' + b.dataset.video + '/hqdefault.jpg';
+        playBtn.setAttribute('aria-label', 'Play video: ' + titleEl.textContent);
+        load(b.dataset.video, true);
+      });
+    });
+  }
+
   /* ---------- Back to top (the #top header is sticky, so jump to 0 explicitly) ---------- */
   document.querySelectorAll('a[href="#top"]').forEach(function (a) {
     a.addEventListener('click', function (e) {

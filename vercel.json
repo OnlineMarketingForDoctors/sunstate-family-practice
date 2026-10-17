@@ -3,8 +3,39 @@
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "X-Robots-Tag", "value": "noindex, nofollow" }
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
       ]
+    }
+  ],
+  "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/mole-mapping-victoria-point",
+      "destination": "/total-body-mapping-victoria-point/",
+      "permanent": true
+    },
+    {
+      "source": "/total-body-photography-victoria-point",
+      "destination": "/total-body-mapping-victoria-point/",
+      "permanent": true
+    },
+    {
+      "source": "/total-body-mapping",
+      "destination": "/total-body-mapping-victoria-point/",
+      "permanent": true
+    },
+    {
+      "source": "/skin-cancer-checks-update",
+      "destination": "/skin-checks/",
+      "permanent": true
+    },
+    {
+      "source": "/author/:slug*",
+      "destination": "/news/",
+      "permanent": true
     }
   ]
 }
