@@ -115,13 +115,7 @@
     reveals.forEach(function (el) { el.classList.add('is-visible'); });
   }
 
-  /* ---------- Open now (clinic time is Australia/Brisbane, no daylight saving) ---------- */
-  var HOURS = { 0: null, 1: [450, 1110], 2: [450, 1110], 3: [450, 1110], 4: [450, 1110], 5: [450, 1020], 6: [480, 780] };
-  var DAYS = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-  var fmt = function (m) {
-    var h = Math.floor(m / 60), mm = m % 60, h12 = h % 12 || 12;
-    return h12 + (mm ? '.' + (mm < 10 ? '0' : '') + mm : '') + (h < 12 ? 'am' : 'pm');
-  };
+  /* ---------- Today's consulting hours (clinic time is Australia/Brisbane, no daylight saving) ---------- */
   var clinicNow = function () {
     try {
       var parts = new Intl.DateTimeFormat('en-AU', { timeZone: 'Australia/Brisbane', weekday: 'short', hour: 'numeric', minute: 'numeric', hourCycle: 'h23' }).formatToParts(new Date());
@@ -130,23 +124,6 @@
     } catch (e) { var d = new Date(); return { day: d.getDay(), min: d.getHours() * 60 + d.getMinutes() }; }
   };
   var now = clinicNow();
-  var openStatus = document.querySelector('[data-open-status]');
-  if (openStatus && now.day > -1) {
-    var today = HOURS[now.day];
-    var title, detail, open = false;
-    if (today && now.min >= today[0] && now.min < today[1]) {
-      open = true; title = 'Open now'; detail = 'Until ' + fmt(today[1]) + ' today. All by appointment';
-    } else {
-      var d = now.day, nextHours = null, label = '';
-      if (today && now.min < today[0]) { nextHours = today; label = 'today'; }
-      for (var k = 1; !nextHours && k < 8; k++) { d = (now.day + k) % 7; if (HOURS[d]) { nextHours = HOURS[d]; label = k === 1 ? 'tomorrow' : DAYS[d]; } }
-      title = 'Closed now';
-      detail = 'Opens ' + label + ' at ' + fmt(nextHours[0]) + '. After hours: 134 100';
-    }
-    openStatus.classList.toggle('is-open', open);
-    openStatus.querySelector('[data-open-title]').textContent = title;
-    openStatus.querySelector('[data-open-detail]').textContent = detail;
-  }
   document.querySelectorAll('[data-hours] tr').forEach(function (tr) {
     if (tr.dataset.days.split(',').indexOf(String(now.day)) > -1) tr.classList.add('is-today');
   });
