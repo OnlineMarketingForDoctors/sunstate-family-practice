@@ -13,22 +13,22 @@
   "trailingSlash": true,
   "redirects": [
     {
-      "source": "/mole-mapping-victoria-point",
+      "source": "/mole-mapping-victoria-point/",
       "destination": "/total-body-mapping-victoria-point/",
       "permanent": true
     },
     {
-      "source": "/total-body-photography-victoria-point",
+      "source": "/total-body-photography-victoria-point/",
       "destination": "/total-body-mapping-victoria-point/",
       "permanent": true
     },
     {
-      "source": "/total-body-mapping",
+      "source": "/total-body-mapping/",
       "destination": "/total-body-mapping-victoria-point/",
       "permanent": true
     },
     {
-      "source": "/skin-cancer-checks-update",
+      "source": "/skin-cancer-checks-update/",
       "destination": "/skin-checks/",
       "permanent": true
     },
