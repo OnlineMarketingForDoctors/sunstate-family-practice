@@ -165,13 +165,13 @@
     <div>
       <p class="lead">Many of our families have three and four generations in our care. We see general practice as one continuing consultation, from pregnancy and newborns, through school and adolescence, to parenthood, healthy ageing and later life.</p>
       <div class="rail-ctrl">
-        <button class="rail-btn" type="button" data-rail-prev aria-label="Previous life stage"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.4 7.4L14 6l-6 6 6 6 1.4-1.4L10.8 12z"/></svg></button>
-        <button class="rail-btn" type="button" data-rail-next aria-label="Next life stage"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8.6 16.6L10 18l6-6-6-6-1.4 1.4 4.6 4.6z"/></svg></button>
-        <span class="rail-progress" aria-hidden="true"><span data-rail-bar></span></span>
+        <button class="rail-btn" type="button" data-rail-prev="stages" aria-label="Previous life stage"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.4 7.4L14 6l-6 6 6 6 1.4-1.4L10.8 12z"/></svg></button>
+        <button class="rail-btn" type="button" data-rail-next="stages" aria-label="Next life stage"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8.6 16.6L10 18l6-6-6-6-1.4 1.4 4.6 4.6z"/></svg></button>
+        <span class="rail-progress" aria-hidden="true"><span data-rail-bar="stages"></span></span>
       </div>
     </div>
   </div>
-  <ol class="rail" data-rail tabindex="0" aria-label="Care across the stages of life">
+  <ol class="rail" data-rail="stages" tabindex="0" aria-label="Care across the stages of life">
     <li class="stage">
       <img src="assets/img/life-pregnancy.webp" alt="A pregnant woman having her blood pressure checked by a GP" width="1195" height="1600" loading="lazy">
       <div class="stage__body"><h3>Pregnancy</h3><p>Antenatal care and Mater shared care, with support from your first appointment.</p></div>
@@ -475,7 +475,7 @@
       </div>
     </div>
 
-    <ul class="team" aria-label="Sunstate doctors">
+    <ul class="team" data-rail="team" aria-label="Sunstate doctors">
       <li class="mate"><img src="assets/img/doctors/randal-johnson.webp" alt="" width="500" height="500" loading="lazy"><div><h3>Dr Randal Johnson</h3><p>Skin cancer detection and removal</p></div></li>
       <li class="mate"><img src="assets/img/doctors/lisa-scupham.webp" alt="" width="500" height="500" loading="lazy"><div><h3>Dr Lisa Scupham</h3><p>Skin cancer screening and management</p></div></li>
       <li class="mate"><img src="assets/img/doctors/eugenia-haller.webp" alt="" width="800" height="800" loading="lazy"><div><h3>Dr Eugenia Haller</h3><p>Skin cancer medicine and excisions</p></div></li>
@@ -489,11 +489,17 @@
       <li class="mate"><img src="assets/img/doctors/hannah-witenden.webp" alt="" width="500" height="500" loading="lazy"><div><h3>Dr Hannah Witenden</h3><p>All aspects of general practice</p></div></li>
       <li class="mate mate--more">
         <a href="https://sunstatefamilypractice.com.au/our-team/">
+          <svg class="mate__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
           <span>See all doctors</span>
           <small>Qualifications, interests and the days each doctor consults</small>
         </a>
       </li>
     </ul>
+    <div class="rail-ctrl team-ctrl">
+      <button class="rail-btn" type="button" data-rail-prev="team" aria-label="Previous doctors"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.4 7.4L14 6l-6 6 6 6 1.4-1.4L10.8 12z"/></svg></button>
+      <button class="rail-btn" type="button" data-rail-next="team" aria-label="More doctors"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8.6 16.6L10 18l6-6-6-6-1.4 1.4 4.6 4.6z"/></svg></button>
+      <span class="rail-progress" aria-hidden="true"><span data-rail-bar="team"></span></span>
+    </div>
     <p class="training">Sunstate is a GP training practice. Supporting young doctors in the art of general practice has been part of who we are since day one.</p>
   </div>
 </section>
@@ -539,7 +545,7 @@
       <h2 id="news-title" class="h2">Clinic News</h2>
       <a class="textlink" href="https://sunstatefamilypractice.com.au/news/">All news</a>
     </div>
-    <div class="news__grid">
+    <div class="news__grid" data-rail="news">
       <article class="story story--lead">
         <a href="https://sunstatefamilypractice.com.au/what-happens-when-your-gp-finds-a-suspicious-spot/">
           <img src="assets/img/dermatoscope-arm.webp" alt="" loading="lazy">
@@ -580,6 +586,11 @@
           <div class="story__body"><time datetime="2026-03-13">March 13, 2026</time><h3>Chronic Disease Management: How Your GP Helps You Stay Independent</h3></div>
         </a>
       </article>
+    </div>
+    <div class="rail-ctrl news-ctrl">
+      <button class="rail-btn" type="button" data-rail-prev="news" aria-label="Previous news story"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.4 7.4L14 6l-6 6 6 6 1.4-1.4L10.8 12z"/></svg></button>
+      <button class="rail-btn" type="button" data-rail-next="news" aria-label="Next news story"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8.6 16.6L10 18l6-6-6-6-1.4 1.4 4.6 4.6z"/></svg></button>
+      <span class="rail-progress" aria-hidden="true"><span data-rail-bar="news"></span></span>
     </div>
     <a class="fb-band" href="https://www.facebook.com/SunstateFamilyPractice" target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h3V4h-3c-2.8 0-4.5 1.8-4.5 4.6V11H7v4h2.5v9h4v-9h3l.5-4h-3.5V8.8c0-.5.3-.8.5-.8z"/></svg>

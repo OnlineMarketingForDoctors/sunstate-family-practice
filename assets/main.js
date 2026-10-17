@@ -151,17 +151,23 @@
     if (tr.dataset.days.split(',').indexOf(String(now.day)) > -1) tr.classList.add('is-today');
   });
 
-  /* ---------- Life stages rail: buttons, drag to scroll, progress ---------- */
-  var rail = document.querySelector('[data-rail]');
-  if (rail) {
-    var bar = document.querySelector('[data-rail-bar]');
-    var prev = document.querySelector('[data-rail-prev]');
-    var next = document.querySelector('[data-rail-next]');
-    var step = function () { var c = rail.querySelector('.stage'); return c ? c.getBoundingClientRect().width + 22 : 300; };
+  /* ---------- Sliders (life stages, and doctors on mobile): buttons, drag to scroll, progress ----------
+     Each [data-rail="name"] is driven by [data-rail-prev="name"], [data-rail-next="name"] and [data-rail-bar="name"]. */
+  document.querySelectorAll('[data-rail]').forEach(function (rail) {
+    var name = rail.dataset.rail;
+    var bar = document.querySelector('[data-rail-bar="' + name + '"]');
+    var prev = document.querySelector('[data-rail-prev="' + name + '"]');
+    var next = document.querySelector('[data-rail-next="' + name + '"]');
+    if (!bar || !prev || !next) return;
+    var step = function () {
+      var c = rail.firstElementChild;
+      return c ? c.getBoundingClientRect().width + (parseFloat(getComputedStyle(rail).columnGap) || 0) : 300;
+    };
     var sync = function () {
       var max = rail.scrollWidth - rail.clientWidth;
       var p = max > 0 ? rail.scrollLeft / max : 1;
-      bar.style.width = (Math.max(rail.clientWidth / rail.scrollWidth, 0.12) * 100 + p * (1 - rail.clientWidth / rail.scrollWidth) * 100).toFixed(1) + '%';
+      var visible = rail.clientWidth / rail.scrollWidth;
+      bar.style.width = (Math.max(visible, 0.12) * 100 + p * (1 - visible) * 100).toFixed(1) + '%';
       prev.disabled = rail.scrollLeft < 4;
       next.disabled = rail.scrollLeft > max - 4;
     };
@@ -175,13 +181,13 @@
     });
     var down = null;
     rail.addEventListener('pointerdown', function (e) {
-      if (e.pointerType !== 'mouse') return;
-      down = { x: e.clientX, left: rail.scrollLeft, moved: false };
+      if (e.pointerType !== 'mouse' || rail.scrollWidth <= rail.clientWidth) return;
+      down = { x: e.clientX, left: rail.scrollLeft };
     });
     window.addEventListener('pointermove', function (e) {
       if (!down) return;
       var dx = e.clientX - down.x;
-      if (Math.abs(dx) > 4) { down.moved = true; rail.classList.add('is-dragging'); }
+      if (Math.abs(dx) > 4) rail.classList.add('is-dragging');
       rail.scrollLeft = down.left - dx;
     });
     window.addEventListener('pointerup', function () {
@@ -192,7 +198,7 @@
       var s = step(); rail.scrollTo({ left: Math.round(rail.scrollLeft / s) * s, behavior: reduceMotion ? 'auto' : 'smooth' });
     });
     sync();
-  }
+  });
 
   /* ---------- Services explorer ---------- */
   var svcTabs = Array.prototype.slice.call(document.querySelectorAll('[data-svc]'));
