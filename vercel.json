@@ -33,7 +33,7 @@
       "permanent": true
     },
     {
-      "source": "/author/:slug*",
+      "source": "/author/:slug/",
       "destination": "/news/",
       "permanent": true
     }
