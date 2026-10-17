@@ -460,6 +460,42 @@ body.has-lightbox { overflow: hidden; }
   .hero__inner { padding-top: 36px; padding-bottom: 120px; }
 }
 
+/* play button opens the YouTube video in a lightbox (same as the landing page) */
+.hero__play {
+  position: absolute; left: 75%; top: 46%; transform: translate(-50%, -50%);
+  display: flex; flex-direction: column; align-items: center; gap: 16px;
+  background: none; border: 0; color: #fff; padding: 0;
+}
+.hero__play-ring {
+  width: 112px; height: 112px; border-radius: 50%; display: grid; place-items: center;
+  background: var(--green); box-shadow: 0 0 0 14px rgba(29, 164, 100, .28), 0 20px 50px -10px rgba(0,0,0,.5);
+  transition: transform .3s cubic-bezier(.3,1.4,.5,1), box-shadow .3s;
+  animation: heroPlayPulse 2.6s ease-out infinite;
+}
+.hero__play-ring svg { width: 40px; height: 40px; fill: #fff; margin-left: 6px; }
+.hero__play:hover .hero__play-ring { transform: scale(1.08); }
+.hero__play-label { font-family: var(--f-display); font-weight: 800; font-size: 1.0625rem; text-shadow: 0 2px 12px rgba(0,0,0,.5); max-width: 18ch; text-align: center; line-height: 1.25; }
+@keyframes heroPlayPulse { 0% { box-shadow: 0 0 0 0 rgba(29,164,100,.55), 0 20px 50px -10px rgba(0,0,0,.5); } 70%, 100% { box-shadow: 0 0 0 28px rgba(29,164,100,0), 0 20px 50px -10px rgba(0,0,0,.5); } }
+.js .hero__play { opacity: 0; }
+.js .hero.is-in .hero__play { opacity: 1; transition: opacity .8s .5s; }
+
+/* inline muted clip with a "Watch with sound" button (mobile only) */
+.hero__inline { display: none; }
+.hero__inline-sound {
+  position: absolute; left: 12px; bottom: 12px; z-index: 2; display: inline-flex; align-items: center; gap: 8px;
+  border: 0; border-radius: 999px; padding: 9px 14px 9px 12px; background: rgba(36, 24, 33, .78); color: #fff;
+  font-family: var(--f-display); font-weight: 800; font-size: .875rem; backdrop-filter: blur(6px);
+}
+.hero__inline-sound svg { width: 18px; height: 18px; fill: currentColor; }
+@media (max-width: 960px) {
+  .hero__play { display: none; }
+  .hero__inline {
+    display: block; position: relative; aspect-ratio: 16 / 9; margin: 0 0 24px;
+    border-radius: var(--r-lg); overflow: hidden; background: #000; box-shadow: var(--sh-3);
+  }
+  .hero__inline video, .hero__inline iframe { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; border: 0; }
+}
+
 /* ---------- Quick bar ---------- */
 .quick { position: relative; z-index: 3; margin-top: -72px; }
 .quick__bar {

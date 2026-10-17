@@ -60,16 +60,18 @@
   if (hero) requestAnimationFrame(function () { requestAnimationFrame(function () { hero.classList.add('is-in'); }); });
 
 
-  /* ---------- Hero video lightbox ---------- */
+  /* ---------- Video lightbox (hero and Total Body Mapping play buttons) ---------- */
   var lb = document.querySelector('[data-lightbox]');
-  var lbOpen = document.querySelector('[data-lightbox-open]');
-  if (lb && lbOpen) {
+  var lbOpeners = document.querySelectorAll('[data-lightbox-open]');
+  if (lb && lbOpeners.length) {
     var lbFrame = lb.querySelector('[data-lightbox-frame]');
     var lbClose = lb.querySelector('.lightbox__close');
     var bgWasPlaying = false;
-    var openLb = function () {
+    var lastOpener = null;
+    var openLb = function (opener) {
+      lastOpener = opener;
       var f = document.createElement('iframe');
-      f.src = 'https://www.youtube-nocookie.com/embed/' + lbOpen.dataset.videoId + '?autoplay=1&rel=0&modestbranding=1';
+      f.src = 'https://www.youtube-nocookie.com/embed/' + opener.dataset.videoId + '?autoplay=1&rel=0&modestbranding=1';
       f.title = 'Total Body Mapping at Sunstate Family Practice';
       f.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
       f.allowFullscreen = true;
@@ -85,9 +87,9 @@
       lbFrame.innerHTML = '';
       document.body.classList.remove('has-lightbox');
       if (video && bgWasPlaying) { video.play(); bgWasPlaying = false; }
-      lbOpen.focus();
+      if (lastOpener) lastOpener.focus();
     };
-    lbOpen.addEventListener('click', openLb);
+    lbOpeners.forEach(function (o) { o.addEventListener('click', function () { openLb(o); }); });
     lb.querySelectorAll('[data-lightbox-close]').forEach(function (el) { el.addEventListener('click', closeLb); });
     document.addEventListener('keydown', function (e) {
       if (lb.hidden) return;
@@ -96,6 +98,27 @@
     });
   }
 
+
+  /* ---------- Inline hero video (mobile) ----------
+     A self-hosted clip plays muted with no player chrome (YouTube's iOS player
+     always shows its own buttons). "Watch with sound" swaps in the YouTube video. */
+  var inline = document.querySelector('[data-inline-video]');
+  if (inline) {
+    var clip = inline.querySelector('video');
+    if (window.matchMedia('(max-width: 960px)').matches) {
+      clip.src = clip.dataset.src;
+      if (!reduceMotion) { var cp = clip.play(); if (cp && cp.catch) cp.catch(function () {}); }
+    }
+    inline.querySelector('.hero__inline-sound').addEventListener('click', function () {
+      var f = document.createElement('iframe');
+      f.src = 'https://www.youtube-nocookie.com/embed/' + inline.dataset.videoId + '?autoplay=1&playsinline=1&rel=0&modestbranding=1';
+      f.title = 'Total Body Mapping at Sunstate Family Practice';
+      f.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+      f.allowFullscreen = true;
+      inline.innerHTML = '';
+      inline.appendChild(f);
+    });
+  }
 
   /* ---------- Image reveals ---------- */
   /* observe the unclipped parent: a fully clipped target may never report as intersecting */
