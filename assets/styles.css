@@ -759,7 +759,7 @@ body.has-lightbox { overflow: hidden; }
 .js .mate { opacity: 0; transform: translateY(24px); }
 .js .team.is-visible .mate { opacity: 1; transform: none; transition: opacity .6s, transform .6s cubic-bezier(.2,.7,.2,1); transition-delay: calc(var(--i, 0) * 50ms); }
 .js .team.is-visible .mate:hover { transform: translateY(-6px); transition-delay: 0s; }
-@media (max-width: 1100px) { .team { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 961px) and (max-width: 1100px) { .team { grid-template-columns: repeat(3, 1fr); } }
 @media (max-width: 960px) {
   .principal { grid-template-columns: 1fr; }
   .principal__team { grid-column: 1; grid-row: 1; }

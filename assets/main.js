@@ -159,9 +159,21 @@
     var prev = document.querySelector('[data-rail-prev="' + name + '"]');
     var next = document.querySelector('[data-rail-next="' + name + '"]');
     if (!bar || !prev || !next) return;
-    var step = function () {
-      var c = rail.firstElementChild;
-      return c ? c.getBoundingClientRect().width + (parseFloat(getComputedStyle(rail).columnGap) || 0) : 300;
+    /* scroll positions where each card sits at the start of the slider */
+    var stops = function () {
+      var first = rail.firstElementChild, max = rail.scrollWidth - rail.clientWidth;
+      return Array.prototype.map.call(rail.children, function (c) { return Math.min(c.offsetLeft - first.offsetLeft, max); });
+    };
+    var nearest = function (list) {
+      var best = 0;
+      list.forEach(function (x, i) { if (Math.abs(x - rail.scrollLeft) < Math.abs(list[best] - rail.scrollLeft)) best = i; });
+      return best;
+    };
+    /* scroll to an exact card position, so snapping (notably in Safari) can't leave it part-way */
+    var go = function (dir) {
+      var list = stops(), i = nearest(list), target = i;
+      while (list[target] === list[i] && target + dir >= 0 && target + dir < list.length) target += dir;
+      rail.scrollTo({ left: list[target], behavior: reduceMotion ? 'auto' : 'smooth' });
     };
     var sync = function () {
       var max = rail.scrollWidth - rail.clientWidth;
@@ -171,8 +183,8 @@
       prev.disabled = rail.scrollLeft < 4;
       next.disabled = rail.scrollLeft > max - 4;
     };
-    prev.addEventListener('click', function () { rail.scrollBy({ left: -step(), behavior: reduceMotion ? 'auto' : 'smooth' }); });
-    next.addEventListener('click', function () { rail.scrollBy({ left: step(), behavior: reduceMotion ? 'auto' : 'smooth' }); });
+    prev.addEventListener('click', function () { go(-1); });
+    next.addEventListener('click', function () { go(1); });
     rail.addEventListener('scroll', function () { requestAnimationFrame(sync); }, { passive: true });
     window.addEventListener('resize', sync);
     rail.addEventListener('keydown', function (e) {
@@ -195,7 +207,7 @@
       down = null;
       rail.classList.remove('is-dragging');
       /* let scroll-snap settle on the nearest card */
-      var s = step(); rail.scrollTo({ left: Math.round(rail.scrollLeft / s) * s, behavior: reduceMotion ? 'auto' : 'smooth' });
+      var list = stops(); rail.scrollTo({ left: list[nearest(list)], behavior: reduceMotion ? 'auto' : 'smooth' });
     });
     sync();
   });
