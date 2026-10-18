@@ -97,7 +97,7 @@ SERVICE_PAGES = {
     },
     '/total-body-mapping-victoria-point/': {
         'bg': '/assets/img/video-body-imaging.webp', 'sat': '/assets/img/dermoscopy-mole.webp', 'chip': 'AI-assisted FotoFinder imaging',
-        'pool': ['/assets/img/video-mosaic-view.webp', '/assets/img/clinic-atbm-capture.webp', '/assets/img/gp-reviewing-images.webp', '/assets/img/video-dermatoscope.webp', '/assets/img/man-sailing.webp'],
+        'pool': ['/assets/img/video-mosaic-view.webp', '/assets/img/clinic-atbm-capture.webp', '/assets/img/gp-reviewing-images.webp', '/assets/img/video-dermatoscope.webp', '/assets/img/phone-mole-photo.webp'],
         'crumb': [('Services', '/our-services/'), ('Total Body Mapping', None)],
     },
     '/skin-checks-redland-bay/': {
