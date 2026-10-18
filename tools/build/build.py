@@ -103,7 +103,7 @@ SERVICE_PAGES = {
         'crumb': [('Services', '/our-services/'), ('Skin Checks Redland Bay', None)],
     },
     '/ear-micro-suction/': {
-        'bg': '/assets/img/svc-ear.webp', 'sat': '/assets/img/live/2020-07-dr-t-at-our-micro-suction-treatment-clinic.webp', 'chip': 'Performed by specially trained GPs',
+        'bg': '/assets/img/hero-ear.webp', 'sat': '/assets/img/live/2020-07-dr-t-at-our-micro-suction-treatment-clinic.webp', 'chip': 'Performed by specially trained GPs',
         'pool': ['/assets/img/live/2020-07-earwax-removal-is-benificial-for-hearning-health.webp', '/assets/img/visit-nurse.webp', '/assets/img/life-older.webp'],
         'crumb': [('Services', '/our-services/'), ('Ear Micro Suction', None)],
         'extra': [
@@ -118,7 +118,7 @@ SERVICE_PAGES = {
         ],
     },
     '/iron-infusions/': {
-        'bg': '/assets/img/svc-iron.webp', 'sat': '/assets/img/live/2026-06-2149261069.webp', 'chip': 'Experienced GPs and nurses',
+        'bg': '/assets/img/hero-iron.webp', 'sat': '/assets/img/live/2026-06-2149261069.webp', 'chip': 'Experienced GPs and nurses',
         'pool': ['/assets/img/live/2026-06-2149261141.webp', '/assets/img/live/2026-06-2148973461.webp', '/assets/img/visit-nurse.webp'],
         'crumb': [('Services', '/our-services/'), ('Iron Infusions', None)],
         'extra': [
@@ -129,7 +129,7 @@ SERVICE_PAGES = {
         ],
     },
     '/preventive-health/': {
-        'bg': '/assets/img/svc-preventive.webp', 'sat': '/assets/img/live/2026-06-2150642423.webp', 'chip': 'Health assessments are bulk billed',
+        'bg': '/assets/img/hero-preventive.webp', 'sat': '/assets/img/live/2026-06-2150642423.webp', 'chip': 'Health assessments are bulk billed',
         'pool': ['/assets/img/life-midlife.webp', '/assets/img/news-40s.webp', '/assets/img/life-older.webp', '/assets/img/visit-nurse.webp'],
         'crumb': [('Services', '/our-services/'), ('Preventive Health', None)],
         'extra': [
@@ -256,7 +256,7 @@ def build_service(path, cfg):
         intro = sections.pop(0)['blocks']
     intro = strip_booking(intro)
     lead_html, rest = lead_from(intro, 1)
-    body = [page_hero(h1, lead_html, cfg['bg'], cfg['crumb'], sat=cfg.get('sat'), chip=cfg.get('chip'), kicker=kicker), quick_bar()]
+    body = [page_hero(h1, lead_html, cfg['bg'], cfg['crumb'], chip=cfg.get('chip'), kicker=kicker), quick_bar()]
     pool = Pool(cfg['pool'])
     rest_imgs, rest_text = pull_images(rest)
     if any(b['t'] in ('p', 'ul', 'ol') for b in rest_text):
@@ -334,7 +334,7 @@ def build_suburb(path):
     getting_title = getting['title'] if isinstance(getting['title'], str) else getting['title'][1]
     lead_html, rest = lead_from(access['blocks'], 1)
     body = [page_hero(f'Doctors near {sub["name"]}', lead_html, sub['img'], [(f'{sub["name"]} doctors', None)],
-                      sat='/assets/img/family-generations.webp', chip=f'Patients from {sub["name"]} welcome', kicker=access['title'] if isinstance(access['title'], str) else access['title'][1]),
+                      chip=f'Patients from {sub["name"]} welcome', kicker=access['title'] if isinstance(access['title'], str) else access['title'][1]),
             quick_bar()]
     if rest:
         body.append(statement(rest, '/assets/img/reception.webp'))
@@ -438,7 +438,7 @@ def build_team():
     principal = S.DOCTORS[0]
     cards = ''.join(f'''<li class="mate"><a class="mate__link" href="{d["href"]}">{img(d["img"], "")}<div><h3>{e(d["name"])}</h3>{f'<p class="mate__quals">{e(d["quals"])}</p>' if d["quals"] else ''}<p>{e(d["interest"])}</p>{f'<p class="mate__note">{e(d["note"])}</p>' if d.get("note") else ''}</div></a></li>''' for d in S.DOCTORS)
     body = f'''
-{page_hero('Doctors', prose([intro]), '/assets/img/team.webp', [('Doctors', None)], sat='/assets/img/doctors/andrew-ganter.webp', chip='A GP training practice since 2009')}
+{page_hero('Doctors', prose([intro]), '/assets/img/team.webp', [('Doctors', None)], chip='A GP training practice since 2009')}
 <section class="ps team-page">
   <div class="wrap">
     <div class="ps-head">
@@ -502,7 +502,7 @@ def build_about():
     links = {'Thornlands': 'thornlands-doctors', 'Cleveland': 'cleveland-doctors', 'Redland Bay': 'redland-bay-doctors', 'Sheldon': 'sheldon-doctors',
              'Capalaba': 'capalaba-doctors', 'Alexandra Hills': 'alexandra-hills-doctors', 'Wellington Point': 'wellington-point-doctors'}
     chips = ''.join(f'<li><a href="/{links[re.sub("<[^>]+>", "", i).strip()]}/">{i}</a></li>' if re.sub('<[^>]+>', '', i).strip() in links else f'<li><span>{i}</span></li>' for i in area_list['items'])
-    body = [page_hero('About Sunstate Family Practice', lead_html, '/assets/img/clinic-hallway.webp', [('About Us', None)], sat='/assets/img/live/2021-04-doctor-treating-patient-sunstate-family-practice.webp', chip='AGPAL accredited'),
+    body = [page_hero('About Sunstate Family Practice', lead_html, '/assets/img/clinic-hallway.webp', [('About Us', None)], chip='AGPAL accredited'),
             quick_bar(),
             statement(before, '/assets/img/reception.webp', sat='/assets/img/visit-nurse.webp'),
             timeline,
@@ -543,7 +543,7 @@ def build_services_hub():
         return f'<li><span>{fix_links(i)}</span></li>'
     chips = ''.join(chip(i) for i in items)
     body = f'''
-{page_hero('Our Services', prose([intro]), '/assets/img/live/2021-05-gp-checkups-for-your-baby-victoria-point.webp', [('Our Services', None)], sat='/assets/img/svc-children.webp', chip='Care for every stage of life', kicker=title)}
+{page_hero('Our Services', prose([intro]), '/assets/img/hero-children.webp', [('Our Services', None)], chip='Care for every stage of life', kicker=title)}
 {quick_bar()}
 <section class="ps hub">
   <div class="wrap">
@@ -585,7 +585,7 @@ def build_faqs():
     items.append(qa_item(extra[0]).replace('<details', '<details data-faq id="femaledoctors"', 1))
     items.insert(1, qa_item(extra[1]).replace('<details', '<details data-faq', 1))
     body = f'''
-{page_hero('Frequently Asked Questions', prose(ps[:1]), '/assets/img/reception-question.webp', [('FAQs', None)], sat='/assets/img/visit-frontdesk.webp', chip='Call us on (07) 3207 7744')}
+{page_hero('Frequently Asked Questions', prose(ps[:1]), '/assets/img/reception-question.webp', [('FAQs', None)], chip='Call us on (07) 3207 7744')}
 <section class="faq ps faq--page">
   <div class="wrap faq__grid">
     <div class="faq__list">
@@ -742,7 +742,7 @@ def build_contact():
     rights = [b for b in bs[rights_i:] if b['t'] in ('p', 'ul')]
     h2_book = next(b for b in bs if b['t'] == 'h2')
     body = f'''
-{page_hero('Contact Us', fix_links(h2_book['html']).replace('<strong>', '<p>').replace('</strong>', '</p>'), '/assets/img/reception-question.webp', [('Contact Us', None)], sat='/assets/img/booking-phone.webp', chip='Book online any time')}
+{page_hero('Contact Us', fix_links(h2_book['html']).replace('<strong>', '<p>').replace('</strong>', '</p>'), '/assets/img/reception-question.webp', [('Contact Us', None)], chip='Book online any time')}
 {quick_bar()}
 <section class="ps contact-cards">
   <div class="wrap cc-grid">
@@ -779,7 +779,7 @@ def build_appointment():
     intro, secs = caps_sections(after_links)
     pool = Pool(['/assets/img/visit-frontdesk.webp', '/assets/img/clinic-hallway.webp', '/assets/img/life-older.webp', '/assets/img/reception.webp', '/assets/img/team.webp'])
     body = f'''
-{page_hero(clean_text(h2b['text']), prose(ps_[:1]), '/assets/img/booking-phone.webp', [('Book an Appointment', None)], sat='/assets/img/reception.webp', chip='New patients welcome')}
+{page_hero(clean_text(h2b['text']), prose(ps_[:1]), '/assets/img/booking-phone.webp', [('Book an Appointment', None)], chip='New patients welcome')}
 <section class="ps booking">
   <div class="wrap booking__grid">
     <div class="booking__widget">
@@ -817,7 +817,7 @@ def build_careers():
 <details><summary>Read the role description</summary><div class="acc__body">{prose(j["blocks"])}</div></details>
 <a class="btn btn--green" href="mailto:manager@sunstatefamilypractice.com.au?subject={e(j["title"])}%20application">Apply by email</a></article>''' for j in jobs)
     body = f'''
-{page_hero('Careers', '<p>Join a supportive GP training practice in Victoria Point. View current opportunities for doctors, nurses and reception staff at Sunstate Family Practice.</p>', '/assets/img/careers-nurse.webp', [('Careers', None)], sat='/assets/img/team.webp', chip='RACGP training practice')}
+{page_hero('Careers', '<p>Join a supportive GP training practice in Victoria Point. View current opportunities for doctors, nurses and reception staff at Sunstate Family Practice.</p>', '/assets/img/careers-nurse.webp', [('Careers', None)], chip='RACGP training practice')}
 <section class="ps jobs">
   <div class="wrap">
     <div class="ps-head"><h2 class="h2">Current opportunities</h2><div class="ps-head__lead"><p>Sunstate was established in 2009 and has grown into a thriving general practice. We are committed to nurturing a friendly, relaxed and professional team culture.</p></div></div>
@@ -862,7 +862,7 @@ def build_feedback():
     icons = ['/assets/img/doctors/chau-vu.webp', '/assets/img/visit-frontdesk.webp', '/assets/img/reception.webp']
     area_html = ''.join(f'<article class="fb-area"><figure>{img(icons[i % 3])}</figure><div><h4>{e(x["title"])}</h4>{prose(x["blocks"])}</div></article>' for i, x in enumerate(areas))
     body = f'''
-{page_hero(title, prose([intro]), '/assets/img/reception-question.webp', [('About', '/about-us/'), ('Patient Feedback', None)], sat='/assets/img/life-older.webp', chip='Thank you for your feedback')}
+{page_hero(title, prose([intro]), '/assets/img/reception-question.webp', [('About', '/about-us/'), ('Patient Feedback', None)], chip='Thank you for your feedback')}
 <section class="ps fb-well">
   <div class="wrap fb-well__grid">
     <div><h2 class="h2">{e(well['title'])}</h2>{prose([b for b in well['blocks'] if b['t'] == 'p'][:1])}</div>

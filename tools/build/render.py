@@ -139,25 +139,24 @@ def book_buttons(light=True, book_label='Book online'):
             f'<a class="btn {ghost} btn--lg" href="{S.TEL}">Call {S.PHONE}</a></div>')
 
 
-def page_hero(title, lead_html, bg, trail, sat=None, chip=None, kicker=None, variant=''):
-    """Full-bleed photo hero with breadcrumb, H1, lead, booking buttons and an optional satellite photo."""
-    sat_html = ''
-    if sat:
-        chip_html = f'<figcaption class="phero__chip">{chip}</figcaption>' if chip else ''
-        sat_html = f'<figure class="phero__sat">{img(sat, "", lazy=False)}{chip_html}</figure>'
+def page_hero(title, lead_html, bg, trail, chip=None, kicker=None, variant=''):
+    """Full-bleed photo hero with breadcrumb, an optional pill, H1, lead and booking buttons.
+
+    Nothing is layered over the photo, so the people in it stay visible."""
+    pill = f'<p class="hero__welcome"><span class="pulse-dot" aria-hidden="true"></span>{e(chip)}</p>' if chip else ''
     k = f'<p class="phero__kicker">{e(kicker)}</p>' if kicker else ''
     return f'''
-<section class="phero {variant}">
+<section class="phero{' phero--right' if '/hero-' in bg else ''} {variant}">
   <div class="phero__bg" aria-hidden="true">{img(bg, "", lazy=False)}</div>
   <div class="wrap phero__inner">
     <div class="phero__copy">
       {crumbs(trail)}
+      {pill}
       {k}
       <h1 class="phero__title">{e(title)}</h1>
       <div class="phero__lead">{lead_html}</div>
       {book_buttons()}
     </div>
-    {sat_html}
   </div>
 </section>'''
 
