@@ -91,9 +91,9 @@ TBM_SWAP = {'/assets/img/live/2025-10-fotofinder.webp': ('/assets/img/tbm-atbm-n
 SERVICE_PAGES = {
     '/skin-checks/': {
         'bg': '/assets/img/hero-skin.webp', 'chip': 'No referral needed', 'stmt_sat': '/assets/img/dermoscopy-mole.webp',
-        'pool': ['/assets/img/woman-sun-hat.webp', '/assets/img/man-sailing.webp', '/assets/img/dermatoscope-arm.webp', '/assets/img/freckled-shoulder.webp'],
+        'pool': ['/assets/img/woman-sun-hat.webp', '/assets/img/video-mosaic-view.webp', '/assets/img/dermatoscope-arm.webp', '/assets/img/freckled-shoulder.webp'],
         'crumb': [('Services', '/our-services/'), ('Skin Cancer Checks', None)],
-        'img_swap': TBM_SWAP,
+        'img_swap': {**TBM_SWAP, '/assets/img/live/2026-06-65614.webp': ('/assets/img/skin-check-exam.webp', 'GP examining a patient\'s shoulder with a dermatoscope')},
     },
     '/total-body-mapping-victoria-point/': {
         'bg': '/assets/img/video-body-imaging.webp', 'sat': '/assets/img/dermoscopy-mole.webp', 'chip': 'AI-assisted FotoFinder imaging',
