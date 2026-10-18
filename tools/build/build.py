@@ -87,7 +87,7 @@ def h(text, level='h2'):
 
 SERVICE_PAGES = {
     '/skin-checks/': {
-        'bg': '/assets/img/hero-skin.webp', 'sat': '/assets/img/dermoscopy-mole.webp', 'chip': 'No referral needed',
+        'bg': '/assets/img/hero-skin.webp', 'chip': 'No referral needed', 'stmt_sat': '/assets/img/dermoscopy-mole.webp',
         'pool': ['/assets/img/woman-sun-hat.webp', '/assets/img/man-sailing.webp', '/assets/img/dermatoscope-arm.webp', '/assets/img/freckled-shoulder.webp'],
         'crumb': [('Services', '/our-services/'), ('Skin Cancer Checks', None)],
     },
@@ -103,7 +103,7 @@ SERVICE_PAGES = {
         'crumb': [('Services', '/our-services/'), ('Skin Checks Redland Bay', None)],
     },
     '/ear-micro-suction/': {
-        'bg': '/assets/img/hero-ear.webp', 'sat': '/assets/img/live/2020-07-dr-t-at-our-micro-suction-treatment-clinic.webp', 'chip': 'Performed by specially trained GPs',
+        'bg': '/assets/img/hero-ear.webp', 'chip': 'Performed by specially trained GPs', 'stmt_sat': '/assets/img/svc-ear.webp',
         'pool': ['/assets/img/live/2020-07-earwax-removal-is-benificial-for-hearning-health.webp', '/assets/img/visit-nurse.webp', '/assets/img/life-older.webp'],
         'crumb': [('Services', '/our-services/'), ('Ear Micro Suction', None)],
         'extra': [
@@ -129,7 +129,7 @@ SERVICE_PAGES = {
         ],
     },
     '/preventive-health/': {
-        'bg': '/assets/img/hero-preventive.webp', 'sat': '/assets/img/live/2026-06-2150642423.webp', 'chip': 'Health assessments are bulk billed',
+        'bg': '/assets/img/hero-preventive.webp', 'chip': 'Health assessments are bulk billed', 'stmt_sat': '/assets/img/svc-preventive.webp',
         'pool': ['/assets/img/life-midlife.webp', '/assets/img/news-40s.webp', '/assets/img/life-older.webp', '/assets/img/visit-nurse.webp'],
         'crumb': [('Services', '/our-services/'), ('Preventive Health', None)],
         'extra': [
@@ -260,7 +260,7 @@ def build_service(path, cfg):
     pool = Pool(cfg['pool'])
     rest_imgs, rest_text = pull_images(rest)
     if any(b['t'] in ('p', 'ul', 'ol') for b in rest_text):
-        body.append(statement(rest, pool.next(), sat=pool.next()))
+        body.append(statement(rest, pool.next(), sat=cfg.get('stmt_sat') or pool.next()))
     # pull video playlists and the closing "Ready to get started" block out of the flow
     closing = None
     flow = []
