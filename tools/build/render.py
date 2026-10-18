@@ -80,8 +80,13 @@ def prose(blocks, light=False):
     """Render a run of blocks as flowing text."""
     out = []
     tick = 'ticks ticks--light' if light else 'ticks'
+    prev = None
     for b in blocks:
         t = b['t']
+        # the live posts sometimes repeat an image straight after itself
+        if t == 'img' and prev and prev['t'] == 'img' and prev.get('src') == b.get('src'):
+            continue
+        prev = b
         if t == 'p':
             h = fix_links(b['html'])
             if h.strip():

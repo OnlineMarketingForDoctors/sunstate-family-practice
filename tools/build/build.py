@@ -34,6 +34,39 @@ def title_of(path, fallback):
     return t.replace('&', '&amp;') if '&amp;' not in t else t
 
 
+# wrappers whose photo is decorative and can be swapped when the page already shows it
+SLOTS = ('ps-img', 'ps-sat', 'stmt__img', 'stmt__sat', 'ps-check__img', 'pcompare__img', 'ps-band__bg',
+         'psteps__img', 'faq__img', 'local__bg', 'local__sat', 'final__bg')
+# general clinic photos used when a page's own pool runs out
+SPARE = ['/assets/img/patient-consult.webp', '/assets/img/visit-nurse.webp', '/assets/img/clinic-hallway.webp',
+         '/assets/img/reception.webp', '/assets/img/hands.webp', '/assets/img/visit-frontdesk.webp',
+         '/assets/img/family-generations.webp', '/assets/img/team.webp', '/assets/img/reception-question.webp',
+         '/assets/img/family-beach.webp', '/assets/img/jetty-victoria-point.webp', '/assets/img/life-midlife.webp',
+         '/assets/img/life-older.webp', '/assets/img/life-child.webp', '/assets/img/sun-safe-flatlay.webp']
+
+
+def dedupe_images(html, pool=()):
+    """Give every decorative photo slot a picture the page doesn't already show."""
+    start, end = html.find('<main'), html.find('</main>')
+    main = html[start:end]
+    tags = []
+    for m in re.finditer(r'<img\b[^>]*?\bsrc="(/assets/img/[^"]+)"', main):
+        cls = re.findall(r'class="([^"]*)"', main[max(0, m.start() - 160):m.start() + len(m.group(0))])
+        slot = bool(cls) and any(c in SLOTS for c in cls[-1].split())
+        tags.append((m.start(1), m.end(1), m.group(1), slot))
+    srcs = [t[2] for t in tags]
+    keep = {}
+    for i, (_, _, src, slot) in enumerate(tags):
+        if src not in keep or (tags[keep[src]][3] and not slot):
+            keep[src] = i
+    spare = [i for i in list(pool) + SPARE if i not in srcs]
+    for i in reversed(range(len(tags))):
+        a, b, src, slot = tags[i]
+        if slot and keep[src] != i and spare:
+            main = main[:a] + spare.pop(0) + main[b:]
+    return html[:start] + main + html[end:]
+
+
 def write(path, template, **ctx):
     out = os.path.join(ROOT, path.strip('/'), 'index.html') if path != '/' else os.path.join(ROOT, 'index.html')
     os.makedirs(os.path.dirname(out), exist_ok=True)
@@ -44,8 +77,11 @@ def write(path, template, **ctx):
             section = item['href']
             break
     ctx.setdefault('current_section', section)
+    img_pool = ctx.pop('img_pool', ())
     html = env.get_template(template).render(site=S, **ctx)
     html = re.sub(r'\n\s*\n+', '\n', html)
+    if template == 'page.html':
+        html = dedupe_images(html, img_pool)
     open(out, 'w', encoding='utf-8').write(html)
     WRITTEN.append(path)
 
@@ -123,8 +159,10 @@ SERVICE_PAGES = {
         ],
     },
     '/iron-infusions/': {
-        'bg': '/assets/img/hero-iron.webp', 'sat': '/assets/img/live/2026-06-2149261069.webp', 'chip': 'Experienced GPs and nurses',
-        'pool': ['/assets/img/live/2026-06-2149261141.webp', '/assets/img/live/2026-06-2148973461.webp', '/assets/img/visit-nurse.webp'],
+        'bg': '/assets/img/hero-iron.webp', 'chip': 'Experienced GPs and nurses',
+        'pool': ['/assets/img/iron-drip.webp', '/assets/img/visit-nurse.webp'],
+        # the live stock shot of the same model in a cafe repeats the opening photo
+        'img_swap': {'/assets/img/live/2026-06-2149261141.webp': ('/assets/img/iron-blood-results.webp', 'GP going through blood test results with a patient')},
         'crumb': [('Services', '/our-services/'), ('Iron Infusions', None)],
         'extra': [
             h('Signs your iron may be low'),
@@ -307,7 +345,7 @@ def build_service(path, cfg):
         body.append(final_cta(closing[0], closing[1]))
     else:
         body.append(final_cta())
-    write(path, 'page.html', body='\n'.join(body), preload=cfg['bg'], **meta(path))
+    write(path, 'page.html', body='\n'.join(body), preload=cfg['bg'], img_pool=cfg['pool'], **meta(path))
 
 
 # ---------------------------------------------------------------- suburb pages
