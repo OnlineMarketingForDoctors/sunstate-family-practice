@@ -135,6 +135,8 @@ SERVICE_PAGES = {
         'bg': '/assets/img/video-body-imaging.webp', 'sat': '/assets/img/dermoscopy-mole.webp', 'chip': 'AI-assisted FotoFinder imaging',
         'pool': ['/assets/img/video-mosaic-view.webp', '/assets/img/gp-reviewing-images.webp', '/assets/img/video-dermatoscope.webp', '/assets/img/video-atbm-device.webp', '/assets/img/phone-mole-photo.webp', '/assets/img/dermoscopy-mole.webp', '/assets/img/freckled-shoulder.webp', '/assets/img/dermatoscope-arm.webp'],
         'crumb': [('Services', '/our-services/'), ('Total Body Mapping', None)],
+        # the live page's blurry HotDoc screenshot reads poorly at this size
+        'img_swap': {'/assets/img/live/2026-06-tbm-instruct-1.webp': ('/assets/img/booking-phone.webp', 'Patient booking an appointment on her phone')},
     },
     '/skin-checks-redland-bay/': {
         'h1': 'Skin Checks Redland Bay', 'kicker': 'GP skin cancer checks near Redland Bay',

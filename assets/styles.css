@@ -896,7 +896,8 @@ body.has-lightbox { overflow: hidden; }
 .fp-split__copy > p { color: var(--stone); }
 .fp-split__img { border-radius: var(--r-xl); overflow: hidden; box-shadow: var(--sh-2); aspect-ratio: 4 / 5; margin-right: calc(var(--gutter) * -1 - 4vw); }
 .fp-split__img img { width: 100%; height: 100%; object-fit: cover; object-position: 40% center; }
-.fp-split__img img[src*="skin-check-exam"] { object-position: 85% center; }
+.fp-split__img img[src*="skin-check-exam"] { object-position: right center; }
+.ps-band__bg img[src*="skin-check-exam"] { object-position: 80% center; }
 .fee-sub { display: block; font-size: .875rem; color: var(--stone); margin-top: 2px; }
 .fp-cta, .fp-note { color: var(--stone); font-size: .9375rem; margin-top: 16px; }
 .fp-cta a, .fp-note a { font-weight: 700; }
