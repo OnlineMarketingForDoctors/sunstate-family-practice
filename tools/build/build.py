@@ -85,11 +85,15 @@ def h(text, level='h2'):
 
 # ---------------------------------------------------------------- service pages
 
+# the clinic's own photo of the ATBM screen replaces the live site's FotoFinder stock shot
+TBM_SWAP = {'/assets/img/live/2025-10-fotofinder.webp': ('/assets/img/tbm-atbm-nurse.webp', 'Sunstate nurse operating the FotoFinder total body mapping system')}
+
 SERVICE_PAGES = {
     '/skin-checks/': {
         'bg': '/assets/img/hero-skin.webp', 'chip': 'No referral needed', 'stmt_sat': '/assets/img/dermoscopy-mole.webp',
         'pool': ['/assets/img/woman-sun-hat.webp', '/assets/img/man-sailing.webp', '/assets/img/dermatoscope-arm.webp', '/assets/img/freckled-shoulder.webp'],
         'crumb': [('Services', '/our-services/'), ('Skin Cancer Checks', None)],
+        'img_swap': TBM_SWAP,
     },
     '/total-body-mapping-victoria-point/': {
         'bg': '/assets/img/video-body-imaging.webp', 'sat': '/assets/img/dermoscopy-mole.webp', 'chip': 'AI-assisted FotoFinder imaging',
@@ -101,6 +105,7 @@ SERVICE_PAGES = {
         'bg': '/assets/img/suburb-redland-bay.webp', 'sat': '/assets/img/live/2026-07-skin-checks-redland-bay.webp', 'chip': '10 minutes from Redland Bay',
         'pool': ['/assets/img/woman-sun-hat.webp', '/assets/img/dermatoscope-arm.webp', '/assets/img/man-sailing.webp', '/assets/img/freckled-shoulder.webp', '/assets/img/gp-reviewing-images.webp'],
         'crumb': [('Services', '/our-services/'), ('Skin Checks Redland Bay', None)],
+        'img_swap': TBM_SWAP,
     },
     '/ear-micro-suction/': {
         'bg': '/assets/img/hero-ear.webp', 'chip': 'Performed by specially trained GPs', 'stmt_sat': '/assets/img/svc-ear.webp',
@@ -244,6 +249,9 @@ def build_service(path, cfg):
     bs = [b for b in bs if not (b['t'] == 'h1' and clean_text(b['text']) == clean_text(c.get('h1') or ''))]
     bs = [b for b in bs if not (b['t'] == 'p' and re.sub(r'<[^>]+>', '', b['html']).startswith(('On this page', 'What Is a Skin Check?Who', 'Skin Monitoring TechnologyWhy')))]
     bs += cfg.get('extra', [])
+    for b in bs:
+        if b['t'] == 'img' and b['src'] in cfg.get('img_swap', {}):
+            b['src'], b['alt'] = cfg['img_swap'][b['src']]
     h1 = cfg.get('h1') or clean_text(c.get('h1') or '')
     intro, sections = split_sections(bs)
     kicker = cfg.get('kicker')
