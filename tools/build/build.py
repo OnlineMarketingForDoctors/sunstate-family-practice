@@ -87,7 +87,7 @@ def h(text, level='h2'):
 
 SERVICE_PAGES = {
     '/skin-checks/': {
-        'bg': '/assets/img/live/2026-02-gp-skin-check.webp', 'sat': '/assets/img/dermoscopy-mole.webp', 'chip': 'No referral needed',
+        'bg': '/assets/img/hero-skin.webp', 'sat': '/assets/img/dermoscopy-mole.webp', 'chip': 'No referral needed',
         'pool': ['/assets/img/woman-sun-hat.webp', '/assets/img/man-sailing.webp', '/assets/img/dermatoscope-arm.webp', '/assets/img/freckled-shoulder.webp'],
         'crumb': [('Services', '/our-services/'), ('Skin Cancer Checks', None)],
     },
