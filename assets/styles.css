@@ -915,7 +915,7 @@ body.has-lightbox { overflow: hidden; }
 .fp-head { display: grid; grid-template-columns: 1fr 1fr; gap: 24px 60px; align-items: end; margin-bottom: 40px; }
 .fp-head p { color: var(--stone); }
 .fp-tables { display: grid; grid-template-columns: 1.1fr 1fr; gap: 24px; align-items: start; }
-@media (max-width: 1180px) { .fp-tables { grid-template-columns: 1fr; } }
+@media (max-width: 1239px) { .fp-tables { grid-template-columns: 1fr; } }
 .fp-tables > * { min-width: 0; }
 .fp-tablecard { background: #fff; border-radius: var(--r-xl); box-shadow: var(--sh-1); padding: clamp(20px, 3vw, 32px); }
 .fp-tablecard h3 { font-size: 1.2rem; font-weight: 800; color: var(--plum); margin-bottom: 16px; }
