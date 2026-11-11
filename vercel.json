@@ -33,6 +33,11 @@
       "permanent": true
     },
     {
+      "source": "/skin-checks-redland-bay/",
+      "destination": "/skin-checks/",
+      "permanent": true
+    },
+    {
       "source": "/author/:slug/",
       "destination": "/news/",
       "permanent": true

@@ -1,15 +1,14 @@
 """Shared site data: navigation, doctors, services, booking links and news topics."""
 
 HOTDOC = 'https://www.hotdoc.com.au/medical-centres/victoria-point-QLD-4165/sunstate-family-practice/doctors'
-PHONE = '(07) 3207 7744'
-TEL = 'tel:+61732077744'
+PHONE = '(07) 4278 4751'
+TEL = 'tel:+61742784751'
 LIVE = 'https://sunstatefamilypractice.com.au'
 
 NAV = [
     {'label': 'Services', 'href': '/our-services/', 'children': [
         {'label': 'Skin Cancer Checks', 'href': '/skin-checks/'},
         {'label': 'Total Body Mapping', 'href': '/total-body-mapping-victoria-point/'},
-        {'label': 'Skin Checks Redland Bay', 'href': '/skin-checks-redland-bay/'},
         {'label': 'Ear Micro Suction', 'href': '/ear-micro-suction/'},
         {'label': 'Iron Infusions', 'href': '/iron-infusions/'},
         {'label': 'Preventive Health', 'href': '/preventive-health/'},
@@ -75,8 +74,6 @@ SERVICES = [
      'summary': 'Protect yourself and your family from disease and infection before you travel.'},
     {'name': 'Chronic Disease Management', 'href': '/chronic-disease-management/', 'img': '/assets/img/svc-chronic.webp',
      'summary': 'Care plans and team care coordinated by our nurses with your GP and allied health.'},
-    {'name': 'Skin Checks Redland Bay', 'href': '/skin-checks-redland-bay/', 'img': '/assets/img/live/2026-07-skin-checks-redland-bay.webp',
-     'summary': 'Comprehensive skin checks for patients from Redland Bay, minutes from the practice.'},
 ]
 
 SUBURBS = {

@@ -16,6 +16,7 @@ REDIRECTS = {
     '/total-body-photography-victoria-point/': '/total-body-mapping-victoria-point/',
     '/total-body-mapping/': '/total-body-mapping-victoria-point/',
     '/skin-cancer-checks-update/': '/skin-checks/',
+    '/skin-checks-redland-bay/': '/skin-checks/',
 }
 
 
@@ -38,7 +39,7 @@ def local_href(href):
         return REDIRECTS.get(href, href)
     if href.startswith('tel:'):
         digits = re.sub(r'\D', '', href)
-        if digits.endswith('732077744'):
+        if digits.endswith('42784751'):
             return S.TEL
     return href
 
@@ -299,7 +300,10 @@ def section_checklist(title, lead_html, lists_html, after_html, image, tone=''):
       <figure class="ps-check__img reveal-img">{img(image)}</figure>
       <div class="ps-check__card">{lists_html}</div>
     </div>
-    {f'<div class="ps-check__after">{after_html}</div>' if after_html else ''}
+    <div class="ps-check__foot">
+      {f'<div class="ps-check__after">{after_html}</div>' if after_html else ''}
+      {book_buttons(light=False)}
+    </div>
   </div>
 </section>'''
 

@@ -129,7 +129,10 @@ SERVICE_PAGES = {
         'bg': '/assets/img/hero-skin.webp', 'chip': 'No referral needed', 'stmt_sat': '/assets/img/dermoscopy-mole.webp',
         'pool': ['/assets/img/woman-sun-hat.webp', '/assets/img/video-mosaic-view.webp', '/assets/img/dermatoscope-arm.webp', '/assets/img/freckled-shoulder.webp'],
         'crumb': [('Services', '/our-services/'), ('Skin Cancer Checks', None)],
-        'img_swap': {**TBM_SWAP, '/assets/img/live/2026-06-65614.webp': ('/assets/img/skin-check-exam.webp', 'GP examining a patient\'s shoulder with a dermatoscope')},
+        'img_swap': {**TBM_SWAP,
+                     # the live page used an allergy patch-test stock photo here
+                     '/assets/img/live/2026-06-2149140500.webp': ('/assets/img/man-sailing.webp', 'Man out on the bay in the Queensland sun'),
+                     '/assets/img/live/2026-06-65614.webp': ('/assets/img/skin-check-exam.webp', 'GP examining a patient\'s shoulder with a dermatoscope')},
     },
     '/total-body-mapping-victoria-point/': {
         'bg': '/assets/img/video-body-imaging.webp', 'sat': '/assets/img/dermoscopy-mole.webp', 'chip': 'AI-assisted FotoFinder imaging',
@@ -137,13 +140,6 @@ SERVICE_PAGES = {
         'crumb': [('Services', '/our-services/'), ('Total Body Mapping', None)],
         # the live page's blurry HotDoc screenshot reads poorly at this size
         'img_swap': {'/assets/img/live/2026-06-tbm-instruct-1.webp': ('/assets/img/booking-phone.webp', 'Patient booking an appointment on her phone')},
-    },
-    '/skin-checks-redland-bay/': {
-        'h1': 'Skin Checks Redland Bay', 'kicker': 'GP skin cancer checks near Redland Bay',
-        'bg': '/assets/img/suburb-redland-bay.webp', 'sat': '/assets/img/live/2026-07-skin-checks-redland-bay.webp', 'chip': '10 minutes from Redland Bay',
-        'pool': ['/assets/img/woman-sun-hat.webp', '/assets/img/dermatoscope-arm.webp', '/assets/img/man-sailing.webp', '/assets/img/freckled-shoulder.webp', '/assets/img/gp-reviewing-images.webp'],
-        'crumb': [('Services', '/our-services/'), ('Skin Checks Redland Bay', None)],
-        'img_swap': TBM_SWAP,
     },
     '/ear-micro-suction/': {
         'bg': '/assets/img/hero-ear.webp', 'chip': 'Performed by specially trained GPs', 'stmt_sat': '/assets/img/svc-ear.webp',
@@ -182,7 +178,7 @@ SERVICE_PAGES = {
             p('Our GPs and nurses offer a range of checks and screening to pick up risks early:'),
             ul('Free Health Screening for 45-49 year olds', 'Free annual Health checks for over 75 year olds', 'Screening for early risk of Vascular/ Heart disease with Arterial Brachial Index',
                'Spirometry', 'ECG’s', 'Skin cancer screening', 'Lifestyle modification', 'Weight loss advice'),
-            p('Care plans and health assessments are bulk billed Monday to Friday, 8am to 5pm. <a href="/fees/">See our fees</a>.'),
+            p('Health assessments and Chronic Condition Management Plans are bulk billed Monday to Friday, 8am to 5pm. <a href="/fees/">See our fees</a>.'),
             h('Make a plan with your GP'),
             p('Book a longer appointment for a health assessment so your GP has time to review your history, check your blood pressure, weight and blood tests, and agree on the screening that suits your age and risk.'),
             p('Our article <a href="/preventive-healthcare-checklist-2021/">Preventive healthcare checklist</a> is a good place to start.'),
@@ -202,7 +198,7 @@ SERVICE_PAGES = {
     },
     '/chronic-disease-management/': {
         'h1': 'Chronic Disease Management',
-        'bg': '/assets/img/svc-chronic.webp', 'sat': '/assets/img/live/2026-03-people-managing-chronic-illness.webp', 'chip': 'Care plans are bulk billed',
+        'bg': '/assets/img/svc-chronic.webp', 'sat': '/assets/img/live/2026-03-people-managing-chronic-illness.webp', 'chip': 'Management plans are bulk billed',
         'pool': ['/assets/img/life-older.webp', '/assets/img/news-chronic.webp', '/assets/img/hands.webp'],
         'crumb': [('Services', '/our-services/'), ('Chronic Disease Management', None)],
         'extra': [
@@ -210,7 +206,7 @@ SERVICE_PAGES = {
             p('1'), h('A GP management plan', 'h3'), p('Your GP works with you to set goals for your condition and the care you need to reach them.'),
             p('2'), h('Team care arrangements', 'h3'), p('Our nurses coordinate your care with allied health professionals and specialists, including Medicare rebateable referrals where you are eligible.'),
             p('3'), h('Regular reviews', 'h3'), p('We review your plan regularly so your care keeps up with your health.'),
-            p('Care plans and health assessments are bulk billed Monday to Friday, 8am to 5pm. <a href="/fees/">See our fees</a>.'),
+            p('Health assessments and Chronic Condition Management Plans are bulk billed Monday to Friday, 8am to 5pm. <a href="/fees/">See our fees</a>.'),
         ],
     },
 }
@@ -628,12 +624,12 @@ def build_faqs():
         items.append(qa_item(q, i == 0).replace('<details', f'<details data-faq{f" id={chr(34)}{aid}{chr(34)}" if aid else ""}', 1))
     extra = [
         {'t': 'qa', 'q': 'Do you have female doctors?', 'a': [p('Yes. Many of our GPs are women, including doctors with interests in women’s health, antenatal care and children’s health. You can choose your doctor when you book online.')]},
-        {'t': 'qa', 'q': 'Do you bulk bill?', 'a': [p('Sunstate Family Practice is a private billing practice. Children 12 years and under are bulk billed for standard GP consultations between 8am and 5pm Monday to Friday. DVA Gold and White card holders are bulk billed for eligible conditions, and care plans, health assessments, home medication reviews, heart health assessments and immunisations are bulk billed. <a href="/fees/">See our fees</a>.')]},
+        {'t': 'qa', 'q': 'Do you bulk bill?', 'a': [p('Sunstate Family Practice is a private billing practice. Children 12 years and under are bulk billed for standard GP consultations between 8am and 5pm Monday to Friday. DVA Gold Card holders are bulk billed, as are health assessments, Chronic Condition Management Plans, home medication reviews and immunisations. <a href="/fees/">See our fees</a>.')]},
     ]
     items.append(qa_item(extra[0]).replace('<details', '<details data-faq id="femaledoctors"', 1))
     items.insert(1, qa_item(extra[1]).replace('<details', '<details data-faq', 1))
     body = f'''
-{page_hero('Frequently Asked Questions', prose(ps[:1]), '/assets/img/reception-question.webp', [('FAQs', None)], chip='Call us on (07) 3207 7744')}
+{page_hero('Frequently Asked Questions', prose(ps[:1]), '/assets/img/reception-question.webp', [('FAQs', None)], chip='Call us on (07) 4278 4751')}
 <section class="faq ps faq--page">
   <div class="wrap faq__grid">
     <div class="faq__list">

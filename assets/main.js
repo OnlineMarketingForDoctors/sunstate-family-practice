@@ -484,7 +484,7 @@
           '\nHow did you hear about us: ' + data.heard_about_us + '\n\n' + data.message;
         var mailto = 'mailto:reception@sunstatefamilypractice.com.au?subject=' + encodeURIComponent('Website enquiry from ' + data.first_name + ' ' + data.last_name) +
           '&body=' + encodeURIComponent(body);
-        setStatus('is-pending', 'Online enquiries aren’t connected yet. <a href="' + escapeHtml(mailto) + '">Send your message by email</a> (we’ve filled it in for you) or call us on <a href="tel:+61732077744">(07) 3207 7744</a>.');
+        setStatus('is-pending', 'Online enquiries aren’t connected yet. <a href="' + escapeHtml(mailto) + '">Send your message by email</a> (we’ve filled it in for you) or call us on <a href="tel:+61742784751">(07) 4278 4751</a>.');
         return;
       }
       submitBtn.disabled = true;
@@ -497,7 +497,7 @@
           setStatus('is-success', 'Message sent. Thanks, ' + escapeHtml(data.first_name) + '. Our reception team will get back to you during opening hours.');
         })
         .catch(function () {
-          setStatus('is-error', 'Your message didn’t send. Check your connection and try again, or call us on <a href="tel:+61732077744">(07) 3207 7744</a>.');
+          setStatus('is-error', 'Your message didn’t send. Check your connection and try again, or call us on <a href="tel:+61742784751">(07) 4278 4751</a>.');
         })
         .then(function () { submitBtn.disabled = false; submitBtn.textContent = 'Send message'; });
     });
