@@ -39,7 +39,7 @@ def local_href(href):
         return REDIRECTS.get(href, href)
     if href.startswith('tel:'):
         digits = re.sub(r'\D', '', href)
-        if digits.endswith('42784751'):
+        if digits.endswith('32077744'):
             return S.TEL
     return href
 

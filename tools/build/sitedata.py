@@ -1,8 +1,8 @@
 """Shared site data: navigation, doctors, services, booking links and news topics."""
 
 HOTDOC = 'https://www.hotdoc.com.au/medical-centres/victoria-point-QLD-4165/sunstate-family-practice/doctors'
-PHONE = '(07) 4278 4751'
-TEL = 'tel:+61742784751'
+PHONE = '(07) 3207 7744'
+TEL = 'tel:+61732077744'
 LIVE = 'https://sunstatefamilypractice.com.au'
 
 NAV = [

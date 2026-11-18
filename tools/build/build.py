@@ -629,7 +629,7 @@ def build_faqs():
     items.append(qa_item(extra[0]).replace('<details', '<details data-faq id="femaledoctors"', 1))
     items.insert(1, qa_item(extra[1]).replace('<details', '<details data-faq', 1))
     body = f'''
-{page_hero('Frequently Asked Questions', prose(ps[:1]), '/assets/img/reception-question.webp', [('FAQs', None)], chip='Call us on (07) 4278 4751')}
+{page_hero('Frequently Asked Questions', prose(ps[:1]), '/assets/img/reception-question.webp', [('FAQs', None)], chip='Call us on (07) 3207 7744')}
 <section class="faq ps faq--page">
   <div class="wrap faq__grid">
     <div class="faq__list">
