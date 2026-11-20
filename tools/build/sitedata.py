@@ -69,7 +69,7 @@ SERVICES = [
     {'name': 'Iron Infusions', 'href': '/iron-infusions/', 'img': '/assets/img/svc-iron.webp',
      'summary': 'We have doctors who are experienced in performing Iron Infusions at our practice.'},
     {'name': 'Preventive Health', 'href': '/preventive-health/', 'img': '/assets/img/svc-preventive.webp',
-     'summary': 'A proactive, collaborative, patient centered approach to health care.'},
+     'summary': 'A proactive, collaborative, patient-centred approach to health care.'},
     {'name': 'Travel Medicine', 'href': '/travel-medicine/', 'img': '/assets/img/svc-travel.webp',
      'summary': 'Protect yourself and your family from disease and infection before you travel.'},
     {'name': 'Chronic Disease Management', 'href': '/chronic-disease-management/', 'img': '/assets/img/svc-chronic.webp',

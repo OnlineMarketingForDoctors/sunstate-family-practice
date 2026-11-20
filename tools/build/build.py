@@ -7,6 +7,7 @@ content/handmade.json (metadata for the hand-built homepage and fees page), rend
 every page through templates/, and writes each one to the same URL path as the live
 site (for example /about-us/index.html) so existing links and rankings carry over.
 """
+import html as htmllib
 import json
 import os
 import re
@@ -67,6 +68,63 @@ def dedupe_images(html, pool=()):
     return html[:start] + main + html[end:]
 
 
+# section headings in sentence case (service names such as Total Body Mapping keep their capitals);
+# page titles, article titles and people's names are left as written
+HEADING_CASE = {
+    'A Clear Baseline': 'A clear baseline',
+    'A Plan You Understand': 'A plan you understand',
+    'After Hours': 'After hours',
+    'Before You Come In': 'Before you come in',
+    'Book Your Mole Mapping Appointment': 'Book your Mole Mapping appointment',
+    'Context in Your Notes': 'Context in your notes',
+    'Fees & Billing Arrangements': 'Fees & billing arrangements',
+    'Fees and Rebates': 'Fees and rebates',
+    'Frequently Asked Questions': 'Frequently asked questions',
+    'GP Consultation Fees': 'GP consultation fees',
+    'Home Visits': 'Home visits',
+    'Image Capture': 'Image capture',
+    'Long Standard Appointments': 'Long standard appointments',
+    'Our Doctors': 'Our doctors',
+    'Our Mission': 'Our mission',
+    'Our Services': 'Our services',
+    'Our Values': 'Our values',
+    'Our Vision': 'Our vision',
+    'Patient Feedback 2023': 'Patient feedback 2023',
+    'Payment & Cancellations': 'Payment & cancellations',
+    'Phone Photos': 'Phone photos',
+    'Proudly providing Medical Services to Victoria Point, QLD': 'Proudly providing medical services to Victoria Point, QLD',
+    'RACGP GP Registrar Training Practice': 'RACGP GP registrar training practice',
+    'Ready to Get Started?': 'Ready to get started?',
+    'Secure Storage': 'Secure storage',
+    'Skin Cancer Detection Consultation Fees': 'Skin cancer detection consultation fees',
+    'Skin Check': 'Skin check',
+    'Skin Check or Total Body Mapping?': 'Skin check or Total Body Mapping?',
+    'TBM Images': 'TBM images',
+    'Taxi/ Ride-share': 'Taxi/rideshare',
+    'Taxi/ Rideshare': 'Taxi/rideshare',
+    'Total Body Mapping (Mole Mapping) Fees': 'Total Body Mapping (Mole Mapping) fees',
+    'VR GP Position – Full time/Part time': 'VR GP position – full time/part time',
+    'What You Get With Mole Mapping & Total Body Photography': 'What you get with Mole Mapping & Total Body Photography',
+    "What's Involved in a Mole Mapping Appointment": "What's involved in a Mole Mapping appointment",
+    'Who Is Bulk Billed?': 'Who is bulk billed?',
+    "Why Mole Mapping & Total Body Photography Help Detect Change Early (and Why Phone Photos Don't)": "Why Mole Mapping & Total Body Photography help detect change early (and why phone photos don't)",
+    'Why People Choose Mole Mapping & Advanced Total Body Photography': 'Why people choose Mole Mapping & Advanced Total Body Photography',
+    'Your Plan': 'Your plan',
+    'Your Rights': 'Your rights',
+}
+
+
+def heading_case(html_text):
+    def fix(m):
+        inner = m.group(3)
+        plain = re.sub(r'\s+', ' ', htmllib.unescape(re.sub(r"<[^>]+>", "", inner))).strip()
+        new = HEADING_CASE.get(plain)
+        if not new or '<' in inner:
+            return m.group(0)
+        return f'<{m.group(1)}{m.group(2)}>{htmllib.escape(new, quote=False)}</{m.group(1)}>'
+    return re.sub(r'<(h[2-4])([^>]*)>(.*?)</\1>', fix, html_text, flags=re.S)
+
+
 def write(path, template, **ctx):
     out = os.path.join(ROOT, path.strip('/'), 'index.html') if path != '/' else os.path.join(ROOT, 'index.html')
     os.makedirs(os.path.dirname(out), exist_ok=True)
@@ -80,6 +138,7 @@ def write(path, template, **ctx):
     img_pool = ctx.pop('img_pool', ())
     html = env.get_template(template).render(site=S, **ctx)
     html = re.sub(r'\n\s*\n+', '\n', html)
+    html = heading_case(html)
     if template == 'page.html':
         html = dedupe_images(html, img_pool)
     open(out, 'w', encoding='utf-8').write(html)
