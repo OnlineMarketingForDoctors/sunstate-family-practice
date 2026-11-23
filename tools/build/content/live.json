@@ -769,7 +769,7 @@
    },
    {
     "t": "p",
-    "html": "Thank you to everyone who completed our recent Patient Satisfaction Survey. We value your feedback and use it to continually improve the care and service we provide."
+    "html": "Thank you to everyone who completed our recent Patient Satisfaction Survey. We run this survey every year, and we welcome your feedback at any time. We value your feedback and use it to continually improve the care and service we provide."
    },
    {
     "t": "h3",
@@ -2284,19 +2284,19 @@
     "a": [
      {
       "t": "p",
-      "html": "Sunstate Family Practice is a private billing practice however, children aged 12 years and under are bulk billed between 8am & 5pm Monday to Friday for consultations (extras incur additional costs including vaccines and procedures). Your Medicare rebate can be immediately processed via our Tyro payment facility. Fees are determined by the length of consultation and procedure performed and the gap on consultations varies depending on these factors. DVA Gold Card holders are bulk billed. We offer a range of health care checks that are bulk billed including: Health assessments, Chronic Condition Management Plans, Home Medication Reviews, Childhood and Adult immunisations."
+      "html": "Sunstate Family Practice is a private billing practice however, children aged 12 years and under are bulk billed between 8am & 5pm Monday to Friday for consultations, excluding telehealth (extras incur additional costs including vaccines and procedures). If you pay with a debit card, your Medicare rebate can be processed on the spot and paid back the same day. Fees are determined by the length of consultation and procedure performed and the gap on consultations varies depending on these factors. DVA Gold Card holders are bulk billed. We offer a range of health care checks that are bulk billed including: Health assessments, Chronic Condition Management Plans, Home Medication Reviews, Childhood and Adult immunisations."
      },
      {
       "t": "p",
-      "html": "Our Current Schedule of Fees is based on the AMA fee structure and is available at reception and <strong><strong><a href=\"https://sunstatefamilypractice.com.au/wp-content/uploads/2026/09/Consultation-Fees-1st-October-2025-updated-surcharge-removed.pdf\">here</a></strong></strong>."
+      "html": "Our Current Schedule of Fees is based on the AMA fee structure and is available at reception and <a href=\"/fees/\">on our Fees page</a>."
      },
      {
       "t": "p",
-      "html": "Your Medicare claim may be processed by our receptionist via our Tyro facility – your rebate is instant!"
+      "html": "Pay with a debit card and reception can process your Medicare claim on the spot, so your rebate is paid back the same day."
      },
      {
       "t": "p",
-      "html": "Register for the Medicare Safety Net <strong><strong>on the</strong></strong><a href=\"http://www.servicesaustralia.gov.au/\"><strong><strong>Services Australia</strong></strong></a> <strong><strong>website</strong></strong>."
+      "html": "Register for the Medicare Safety Net on the <a href=\"https://www.servicesaustralia.gov.au/medicare-safety-nets\" target=\"_blank\" rel=\"noopener\">Services Australia website</a>."
      }
     ]
    },
@@ -2306,7 +2306,7 @@
     "a": [
      {
       "t": "p",
-      "html": "Yes. <a href=\"https://sunstatefamilypractice.com.au/skin-checks/\">We perform thousands of skin checks</a> every year! Yearly skin checks are essential as Queensland has one of the highest skin cancer rates in the world! Sunstate family practice uses the latest dermatology technology, which allows the doctors to see, store and compare images of any moles or lesions at high resolution and magnification over time. Total Body Mapping is available now at Sunstate Family Practice! The latest dermatology technology uses AI (artificial intelligence) to improve diagnostic accuracy. See the website or ask our reception staff for more information. Our doctors perform excision of confirmed or suspected lesions in our procedure room on site."
+      "html": "Yes. <a href=\"https://sunstatefamilypractice.com.au/skin-checks/\">We perform thousands of skin checks</a> every year! Yearly skin checks are essential as Queensland has one of the highest skin cancer rates in the world! Sunstate Family Practice uses the latest dermatology technology, which allows the doctors to see, store and compare images of any moles or lesions at high resolution and magnification over time. Total Body Mapping is available now at Sunstate Family Practice! The latest dermatology technology uses AI (artificial intelligence) to improve diagnostic accuracy. See the website or ask our reception staff for more information. Our doctors perform excision of confirmed or suspected lesions in our procedure room on site."
      }
     ]
    },
@@ -2316,7 +2316,7 @@
     "a": [
      {
       "t": "p",
-      "html": "Yes. We charge a fee for Telehealth consultations (Medicare rebate currently applies provided you have been seen in person by a doctor at our practice in the past 12 months). At Sunstate, our doctors prefer to see you in person but understand that sometimes it is appropriate and more convenient for you to take advantage of a telehealth consultation. Please book via our website or HotDoc app."
+      "html": "Yes. We charge a fee for Telehealth consultations (Medicare rebate currently applies provided you have been seen in person by a doctor at our practice in the past 12 months). At Sunstate, our doctors prefer to see you in person but understand that sometimes it is appropriate and more convenient for you to take advantage of a telehealth consultation. Please book through our website, the HotDoc app or by calling reception on (07) 3207 7744."
      }
     ]
    },
@@ -2326,7 +2326,7 @@
     "a": [
      {
       "t": "p",
-      "html": "We value your privacy and rights and have safeguards to ensure that your medical record is only accessible to authorised staff. We abide by the 13 Australian National Privacy Principles. A copy of our privacy policy is available at reception and<strong><a href=\"https://sunstatefamilypractice.com.au/wp-content/uploads/2025/08/Privacy-Policy-incl-AI.pdf\">here</a>.</strong> The National Privacy Commissioner is able to receive complaints concerning privacy issues on <a href=\"tel:1300%20363%20992\">1300 363 992</a> or <a href=\"http://www.oaic.gov.au/privacy/privacy-complaints\">oaic.gov.au/privacy/privacy-complaints</a>."
+      "html": "We value your privacy and rights and have safeguards to ensure that your medical record is only accessible to authorised staff. We abide by the 13 Australian National Privacy Principles. A copy of our privacy policy is available at reception and <a href=\"/clinic-privacy-policy/\">here</a>. The National Privacy Commissioner is able to receive complaints concerning privacy issues on <a href=\"tel:1300%20363%20992\">1300 363 992</a> or <a href=\"http://www.oaic.gov.au/privacy/privacy-complaints\">oaic.gov.au/privacy/privacy-complaints</a>."
      }
     ]
    },
@@ -2346,7 +2346,7 @@
     "a": [
      {
       "t": "p",
-      "html": "Yes, if it is clinically safe to do so. It is best practice for the doctor to see you for ongoing referral and repeat scripts but your doctor may be able to process your REPEAT script or referral requests online via our <a href=\"https://sunstatefamilypractice.com.au/make-an-appointment/\">booking system</a>."
+      "html": "Yes, if it is clinically safe to do so. It is best practice for the doctor to see you for ongoing referral and repeat scripts but your doctor may be able to process your REPEAT script or referral requests online via our <a href=\"https://www.hotdoc.com.au/medical-centres/victoria-point-QLD-4165/sunstate-family-practice/doctors\" target=\"_blank\" rel=\"noopener\">booking system</a>."
      }
     ]
    },
@@ -2374,7 +2374,7 @@
     "a": [
      {
       "t": "p",
-      "html": "Yes. We charge a fee for Telehealth VIDEO consultations (Medicare rebate currently applies provided you have been seen in person by a doctor at our practice in the past 12 months). At Sunstate, our doctors prefer to see you in person but understand that sometimes it is appropriate and more convenient for you to take advantage of a telehealth consultation. Please book via our website or HotDoc app."
+      "html": "Yes. We charge a fee for Telehealth VIDEO consultations (Medicare rebate currently applies provided you have been seen in person by a doctor at our practice in the past 12 months). At Sunstate, our doctors prefer to see you in person but understand that sometimes it is appropriate and more convenient for you to take advantage of a telehealth consultation. Please book through our website, the HotDoc app or by calling reception on (07) 3207 7744."
      }
     ]
    },
@@ -2529,7 +2529,7 @@
    {
     "t": "h2",
     "text": "To book an appointment, contact us  at: (07) 3207 7744",
-    "html": "<strong>To book an appointment, contact us at:<a href=\"tel:07 3207 7744\">(07) 3207 7744</a></strong>",
+    "html": "<strong>To book an appointment, contact us at: <a href=\"tel:07 3207 7744\">(07) 3207 7744</a></strong>",
     "id": null
    },
    {
@@ -2698,7 +2698,7 @@
     "items": [
      "<a href=\"https://www.hotdoc.com.au/forms/sunstate-family-practice-new-patient-registration-form\">New Patient Registration Form</a>",
      "<a href=\"https://sunstatefamilypractice.com.au/wp-content/uploads/2025/10/NEW-TOR-Transfer-Medical-Records.pdf\">Download Transfer of Medical Records Form</a>",
-     "<a href=\"https://sunstatefamilypractice.com.au/wp-content/uploads/2026/09/Consultation-Fees-1st-October-2025-updated-surcharge-removed.pdf\">Download Fees</a>"
+     "<a href=\"/fees/\">View our fees</a>"
     ]
    },
    {
@@ -2747,7 +2747,7 @@
    },
    {
     "t": "p",
-    "html": "Sunstate Family Practice is a private billing practice but our Tyro facility enables your Medicare rebate to be immediately processed. Fees are determined by the length of consultation and procedure performed. Children 12 years and under are bulk billed for standard GP consultations between 8am and 5pm Monday to Friday, and DVA Gold Card holders are bulk billed. Our Current Schedule of Fees is based on the AMA fee structure and is available at reception and <a href=\"https://sunstatefamilypractice.com.au/wp-content/uploads/2022/10/Fee-Schedule-NOV-2022.pdf\"><strong>here</strong></a>."
+    "html": "Sunstate Family Practice is a private billing practice. If you pay with a debit card, your Medicare rebate can be processed on the spot and paid back the same day. Fees are determined by the length of consultation and procedure performed. Children 12 years and under are bulk billed for standard GP consultations between 8am and 5pm Monday to Friday (excluding telehealth), and DVA Gold Card holders are bulk billed. Our Current Schedule of Fees is based on the AMA fee structure and is available at reception and <a href=\"/fees/\">on our Fees page</a>."
    },
    {
     "t": "p",
@@ -3279,7 +3279,7 @@
    },
    {
     "t": "p",
-    "html": "Queensland has some of the <a href=\"https://www.health.qld.gov.au/news-events/news/sun-safety-skin-cancer-children-queensland-protecting\">highest rates of skin cancer in the world</a>, so regular skin checks are not a luxury. They are part of looking after your health, just like a blood pressure or cholesterol check."
+    "html": "Queensland has some of the <a href=\"https://www.health.qld.gov.au/public-health/topics/skin-cancer-prevention\" target=\"_blank\" rel=\"noopener\">highest rates of skin cancer in the world</a>, so regular skin checks are not a luxury. They are part of looking after your health, just like a blood pressure or cholesterol check."
    },
    {
     "t": "p",
@@ -5900,7 +5900,7 @@
    },
    {
     "t": "p",
-    "html": "He remains committed to high-quality care with evidence-based medicine and patient involvement at the core of his practice. Dr Johnson is currently accepting new patients for general presentations and skin checks."
+    "html": "He remains committed to high-quality care with evidence-based medicine and patient involvement at the core of his practice. Dr Johnson is currently accepting new patients for skin-related consultations only."
    },
    {
     "t": "button",
@@ -6741,7 +6741,7 @@
    },
    {
     "t": "p",
-    "html": "It is a small “butterfly-shaped” gland that forms the body’s <a href=\"https://www.livescience.com/26496-endocrine-system.html\">endocrine system</a>and virtually influencing every other organ in the body."
+    "html": "It is a small “butterfly-shaped” gland that forms the body’s <a href=\"https://www.livescience.com/26496-endocrine-system.html\">endocrine system</a> and virtually influencing every other organ in the body."
    },
    {
     "t": "p",
@@ -6771,7 +6771,7 @@
    },
    {
     "t": "p",
-    "html": "On the other hand, when the gland produces lesser hormones, it is called a condition called <a href=\"https://www.mayoclinic.org/diseases-conditions/hypothyroidism/symptoms-causes/syc-20350284\">hypothyroidism</a> (underactive) that causes increased weight gain and might<a href=\"https://www.canadianliving.com/health/prevention-and-recovery/article/the-butterfly-effect-what-is-a-thyroid-condition-and-how-to-look-for-symptoms\">leave you very sensitive to cold temperature</a>."
+    "html": "On the other hand, when the gland produces lesser hormones, it is called a condition called <a href=\"https://www.mayoclinic.org/diseases-conditions/hypothyroidism/symptoms-causes/syc-20350284\">hypothyroidism</a> (underactive) that causes increased weight gain and might <a href=\"https://www.canadianliving.com/health/prevention-and-recovery/article/the-butterfly-effect-what-is-a-thyroid-condition-and-how-to-look-for-symptoms\">leave you very sensitive to cold temperature</a>."
    },
    {
     "t": "h2",
@@ -7104,7 +7104,7 @@
    {
     "t": "ol",
     "items": [
-     "<strong><em>Eat more frequently but in smaller portions</em></strong> – Eating in smaller portions but more frequently helps to maintain healthy blood pressure and keeps your metabolism active. By eating in smaller portions your <a href=\"https://www.livestrong.com/article/507006-three-benefits-of-eating-smaller-portions/\">metabolism will be working regularly that helps prevent any nutritional</a>imbalances.",
+     "<strong><em>Eat more frequently but in smaller portions</em></strong> – Eating in smaller portions but more frequently helps to maintain healthy blood pressure and keeps your metabolism active. By eating in smaller portions your <a href=\"https://www.livestrong.com/article/507006-three-benefits-of-eating-smaller-portions/\">metabolism will be working regularly that helps prevent any nutritional</a> imbalances.",
      "<strong><em>Know your alcohol limits</em></strong> – Because of increased socialising during the time of holidays, it could be difficult to control your alcohol consumption. However, you can limit your consumption by switching to alternate beverages with lesser alcohol content and opt for cocktails instead of straight wine or beer. Also, it is important to drink plenty of water before and after consuming alcohol.",
      "<strong><em>Eat healthily</em></strong> – Include more fruits and vegetables in your meals. Eat a variety of them and fill your plate with more greens than desserts and snacks.",
      "<strong><em>Switch to healthy snacks</em></strong> – Choose better snacks such as low-carb chips with low-fat dips. Eat seasonal fruits as snacks and trade cookies with nuts."
@@ -7149,7 +7149,7 @@
    },
    {
     "t": "p",
-    "html": "Book an <a href=\"https://sunstatefamilypractice.com.au/make-an-appointment/\"><strong>online appointment</strong></a>or call us at <strong><a href=\"tel:0732077744\">(07) 3207 7744</a></strong> for further discussion."
+    "html": "Book an <a href=\"https://sunstatefamilypractice.com.au/make-an-appointment/\"><strong>online appointment</strong></a> or call us at <strong><a href=\"tel:0732077744\">(07) 3207 7744</a></strong> for further discussion."
    }
   ],
   "h1": "The essential holiday season guide: Tips to keep healthy this Christmas",
@@ -7888,7 +7888,7 @@
    },
    {
     "t": "p",
-    "html": "Please visit our<a href=\"https://sunstatefamilypractice.com.au/make-an-appointment/\">book online</a>page to make an appointment with Dr. Stein."
+    "html": "Please visit our <a href=\"https://sunstatefamilypractice.com.au/make-an-appointment/\">book online</a> page to make an appointment with Dr. Stein."
    }
   ],
   "h1": "Introducing Dr. Tegan Stein",
@@ -8358,7 +8358,7 @@
    },
    {
     "t": "p",
-    "html": "<a href=\"https://sunstatefamilypractice.com.au/total-body-mapping-victoria-point/\">Total Body Mapping (TBM)</a>helps create a visual record of your skin over time. Using precise imaging, TBM captures moles, freckles, and lesions from consistent angles and lighting, making it easier to compare changes between visits."
+    "html": "<a href=\"https://sunstatefamilypractice.com.au/total-body-mapping-victoria-point/\">Total Body Mapping (TBM)</a> helps create a visual record of your skin over time. Using precise imaging, TBM captures moles, freckles, and lesions from consistent angles and lighting, making it easier to compare changes between visits."
    },
    {
     "t": "p",
@@ -8382,7 +8382,7 @@
    },
    {
     "t": "p",
-    "html": "Learn more about Total Body Mapping at Sunstate Family Practice<a href=\"https://sunstatefamilypractice.com.au/total-body-mapping-victoria-point/\">here</a>, or take a look at the<a href=\"https://www.cancer.org.au/about-us/policy-and-advocacy/prevention/uv-radiation/related-resources/detection-and-screening\">Cancer Council’s skin check guidance</a>.<br>"
+    "html": "Learn more about Total Body Mapping at Sunstate Family Practice <a href=\"https://sunstatefamilypractice.com.au/total-body-mapping-victoria-point/\">here</a>, or take a look at the <a href=\"https://www.cancer.org.au/about-us/policy-and-advocacy/prevention/uv-radiation/related-resources/detection-and-screening\">Cancer Council’s skin check guidance</a>.<br>"
    },
    {
     "t": "img",
@@ -8678,7 +8678,7 @@
    },
    {
     "t": "p",
-    "html": "Cancer Council Australia provides a detailed overview of<a href=\"https://www.cancer.org.au/types-of-cancer/skin-cancer/cause-symptoms-risks\">recognised skin cancer risk factors</a>."
+    "html": "Cancer Council Australia provides a detailed overview of <a href=\"https://www.cancer.org.au/types-of-cancer/skin-cancer/cause-symptoms-risks\">recognised skin cancer risk factors</a>."
    },
    {
     "t": "p",
@@ -8711,7 +8711,7 @@
    },
    {
     "t": "p",
-    "html": "If you are concerned about a new or changing spot,<a href=\"https://sunstatefamilypractice.com.au/skin-checks/\">book an appointment with your GP</a>."
+    "html": "If you are concerned about a new or changing spot, <a href=\"https://sunstatefamilypractice.com.au/skin-checks/\">book an appointment with your GP</a>."
    },
    {
     "t": "h2",
@@ -8747,7 +8747,7 @@
    },
    {
     "t": "p",
-    "html": "For some patients, a GP may recommend clinical photography or<a href=\"https://sunstatefamilypractice.com.au/total-body-mapping-victoria-point/\">Total Body Mapping</a>to assist with monitoring over time."
+    "html": "For some patients, a GP may recommend clinical photography or <a href=\"https://sunstatefamilypractice.com.au/total-body-mapping-victoria-point/\">Total Body Mapping</a> to assist with monitoring over time."
    },
    {
     "t": "p",
@@ -8777,7 +8777,7 @@
    },
    {
     "t": "p",
-    "html": "<a href=\"https://sunstatefamilypractice.com.au/skin-checks/\">Skin checks at Sunstate Family Practice</a>are performed by GPs with experience in skin cancer assessment. Where clinically appropriate, biopsies may be performed at the practice."
+    "html": "<a href=\"https://sunstatefamilypractice.com.au/skin-checks/\">Skin checks at Sunstate Family Practice</a> are performed by GPs with experience in skin cancer assessment. Where clinically appropriate, biopsies may be performed at the practice."
    },
    {
     "t": "h2",
@@ -8813,7 +8813,7 @@
    },
    {
     "t": "p",
-    "html": "EMBED VID<a href=\"https://youtu.be/K5-1s2Xpa3E?si=Us4s3OySmbCgUAwA\">Watch the video: What if melanoma is found when I’m having Total Body Mapping?</a>"
+    "html": "EMBED VID <a href=\"https://youtu.be/K5-1s2Xpa3E?si=Us4s3OySmbCgUAwA\">Watch the video: What if melanoma is found when I’m having Total Body Mapping?</a>"
    },
    {
     "t": "h2",
@@ -8876,11 +8876,11 @@
    },
    {
     "t": "p",
-    "html": "A<a href=\"https://sunstatefamilypractice.com.au/skin-checks/\"><strong>skin check</strong></a>is a clinical examination where your GP carefully examines your skin looking for anything unusual or changing. If needed, they’ll explain whether a spot simply needs monitoring or whether further investigation is recommended."
+    "html": "A <a href=\"https://sunstatefamilypractice.com.au/skin-checks/\"><strong>skin check</strong></a> is a clinical examination where your GP carefully examines your skin looking for anything unusual or changing. If needed, they’ll explain whether a spot simply needs monitoring or whether further investigation is recommended."
    },
    {
     "t": "p",
-    "html": "<strong>Total Body Mapping (TBM)</strong>also known as Mole Mapping, is different. Before your skin check, a trained team member takes a series of consistent, high-quality photographs that create a visual baseline of your skin. At future appointments, your GP can compare today’s images with previous ones to identify changes that may not be obvious from memory alone. Learn more about Total Body Mapping<a href=\"https://sunstatefamilypractice.com.au/total-body-mapping-victoria-point/\">here</a>."
+    "html": "<strong>Total Body Mapping (TBM)</strong>also known as Mole Mapping, is different. Before your skin check, a trained team member takes a series of consistent, high-quality photographs that create a visual baseline of your skin. At future appointments, your GP can compare today’s images with previous ones to identify changes that may not be obvious from memory alone. Learn more about Total Body Mapping <a href=\"https://sunstatefamilypractice.com.au/total-body-mapping-victoria-point/\">here</a>."
    },
    {
     "t": "p",
@@ -8924,11 +8924,11 @@
    },
    {
     "t": "p",
-    "html": "The<a href=\"https://www.cancercouncil.com.au/cancer-prevention/screening/checking-for-skin-cancer/\">Cancer Council</a>also recommends regular skin checks for people with higher risk factors, including previous skin cancers, fair skin and significant sun exposure."
+    "html": "The <a href=\"https://www.cancercouncil.com.au/cancer-prevention/screening/checking-for-skin-cancer/\">Cancer Council</a> also recommends regular skin checks for people with higher risk factors, including previous skin cancers, fair skin and significant sun exposure."
    },
    {
     "t": "p",
-    "html": "You can learn more about Total Body Mapping at Sunstate Family Practice<a href=\"https://sunstatefamilypractice.com.au/total-body-mapping-victoria-point/\">here</a>."
+    "html": "You can learn more about Total Body Mapping at Sunstate Family Practice <a href=\"https://sunstatefamilypractice.com.au/total-body-mapping-victoria-point/\">here</a>."
    },
    {
     "t": "h2",
@@ -8991,7 +8991,7 @@
    },
    {
     "t": "p",
-    "html": "If you’re already planning a<a href=\"https://sunstatefamilypractice.com.au/skin-checks/\">skin check at Sunstate Family Practice</a>, ask your GP whether Total Body Mapping would add value for your skin and lifestyle."
+    "html": "If you’re already planning a <a href=\"https://sunstatefamilypractice.com.au/skin-checks/\">skin check at Sunstate Family Practice</a>, ask your GP whether Total Body Mapping would add value for your skin and lifestyle."
    },
    {
     "t": "p",
@@ -9017,11 +9017,11 @@
    },
    {
     "t": "p",
-    "html": "Find more information by the<a href=\"https://www.cancerresearch.org/immunotherapy-by-cancer-type/melanoma-cancer\">Cancer Research Institute</a>."
+    "html": "Find more information by the <a href=\"https://www.cancerresearch.org/immunotherapy-by-cancer-type/melanoma-cancer\">Cancer Research Institute</a>."
    },
    {
     "t": "p",
-    "html": "If you’re already planning a<a href=\"https://sunstatefamilypractice.com.au/skin-checks/\">skin check at Sunstate Family Practice</a>, ask your GP whether Total Body Mapping would add value for your skin and lifestyle."
+    "html": "If you’re already planning a <a href=\"https://sunstatefamilypractice.com.au/skin-checks/\">skin check at Sunstate Family Practice</a>, ask your GP whether Total Body Mapping would add value for your skin and lifestyle."
    },
    {
     "t": "p",
@@ -9047,7 +9047,7 @@
    },
    {
     "t": "p",
-    "html": "Find more information by the<a href=\"https://www.cancerresearch.org/immunotherapy-by-cancer-type/melanoma-cancer\">Cancer Research Institute</a>."
+    "html": "Find more information by the <a href=\"https://www.cancerresearch.org/immunotherapy-by-cancer-type/melanoma-cancer\">Cancer Research Institute</a>."
    }
   ],
   "h1": "Skin Checks and Total Body Mapping: Do You Need Both?",
@@ -9517,7 +9517,7 @@
    },
    {
     "t": "p",
-    "html": "You can find more specific information about blood tests by Healthdirect Australia<a href=\"https://www.healthdirect.gov.au/blood-testing\">here</a>."
+    "html": "You can find more specific information about blood tests by Healthdirect Australia <a href=\"https://www.healthdirect.gov.au/blood-testing\">here</a>."
    },
    {
     "t": "p",
@@ -9562,7 +9562,7 @@
    },
    {
     "t": "p",
-    "html": "We go into more detail on the menopause journey<a href=\"https://sunstatefamilypractice.com.au/ready-to-take-control-of-your-menopause-journey/\">in this article</a>."
+    "html": "We go into more detail on the menopause journey <a href=\"https://sunstatefamilypractice.com.au/ready-to-take-control-of-your-menopause-journey/\">in this article</a>."
    },
    {
     "t": "h2",
@@ -9621,7 +9621,7 @@
    },
    {
     "t": "p",
-    "html": "<a href=\"https://www.who.int/campaigns/world-immunization-week\">World Immunisation Week</a>, held from 24 to 30 April, is a timely reminder that vaccines play an important role in protecting individuals, families and the wider community. At Sunstate Family Practice, immunisations are part of everyday care, from childhood vaccines and adult boosters to flu shots and<a href=\"https://sunstatefamilypractice.com.au/travel-medicine/\">travel vaccinations</a>."
+    "html": "<a href=\"https://www.who.int/campaigns/world-immunization-week\">World Immunisation Week</a>, held from 24 to 30 April, is a timely reminder that vaccines play an important role in protecting individuals, families and the wider community. At Sunstate Family Practice, immunisations are part of everyday care, from childhood vaccines and adult boosters to flu shots and <a href=\"https://sunstatefamilypractice.com.au/travel-medicine/\">travel vaccinations</a>."
    },
    {
     "t": "img",
@@ -9644,7 +9644,7 @@
    },
    {
     "t": "p",
-    "html": "<a href=\"https://www.healthdirect.gov.au/immunisation-and-vaccinations\">Immunisation</a>is not restricted to childhood. It remains relevant throughout adulthood and into older age, even though the vaccines or boosters that matter may change. That’s why it can be helpful to review your vaccination history from time to time rather than assume it is up-to-date."
+    "html": "<a href=\"https://www.healthdirect.gov.au/immunisation-and-vaccinations\">Immunisation</a> is not restricted to childhood. It remains relevant throughout adulthood and into older age, even though the vaccines or boosters that matter may change. That’s why it can be helpful to review your vaccination history from time to time rather than assume it is up-to-date."
    },
    {
     "t": "h2",
@@ -9695,7 +9695,7 @@
    },
    {
     "t": "p",
-    "html": "For children, routine immunisations form part of the<a href=\"https://www.health.gov.au/resources/publications/national-immunisation-program-schedule\">National Immunisation Program schedule</a>. Later in life, vaccination can involve boosters, seasonal vaccines, or a review of what may be relevant based on health, work, travel or family circumstances. That can include situations such as planning<a href=\"https://sunstatefamilypractice.com.au/travel-medicine/\">overseas travel</a>, spending time around a new baby, working in higher-exposure environments, or simply reaching a stage of life where certain"
+    "html": "For children, routine immunisations form part of the <a href=\"https://www.health.gov.au/resources/publications/national-immunisation-program-schedule\">National Immunisation Program schedule</a>. Later in life, vaccination can involve boosters, seasonal vaccines, or a review of what may be relevant based on health, work, travel or family circumstances. That can include situations such as planning <a href=\"https://sunstatefamilypractice.com.au/travel-medicine/\">overseas travel</a>, spending time around a new baby, working in higher-exposure environments, or simply reaching a stage of life where certain"
    },
    {
     "t": "img",
@@ -9750,7 +9750,7 @@
    },
    {
     "t": "p",
-    "html": "World Immunisation Week is a useful reminder to revisit something that is easy to put aside when life is busy. At Sunstate Family Practice, patients in Victoria Point and surrounding areas can<a href=\"https://sunstatefamilypractice.com.au/make-an-appointment/\">book an appointment</a>to discuss their vaccination status with a GP."
+    "html": "World Immunisation Week is a useful reminder to revisit something that is easy to put aside when life is busy. At Sunstate Family Practice, patients in Victoria Point and surrounding areas can <a href=\"https://sunstatefamilypractice.com.au/make-an-appointment/\">book an appointment</a> to discuss their vaccination status with a GP."
    }
   ],
   "h1": "Why vaccines still matter for you and your family",
@@ -10970,7 +10970,7 @@
    },
    {
     "t": "p",
-    "html": "To diagnose coeliac disease, your doctor may ask for a blood test and a biopsy. They will start your diagnosis for coeliac disease by using a small sample from your small intestine. Using this sample, they will test<a href=\"https://www.closingthegap.ca/the-difference-between-celiac-disease-gluten-intolerance-and-wheat-allergy/\">if there are specific antibodies in your blood</a> that can be scaled down to coeliac disease."
+    "html": "To diagnose coeliac disease, your doctor may ask for a blood test and a biopsy. They will start your diagnosis for coeliac disease by using a small sample from your small intestine. Using this sample, they will test <a href=\"https://www.closingthegap.ca/the-difference-between-celiac-disease-gluten-intolerance-and-wheat-allergy/\">if there are specific antibodies in your blood</a> that can be scaled down to coeliac disease."
    },
    {
     "t": "h2",
@@ -11085,7 +11085,7 @@
    },
    {
     "t": "p",
-    "html": "According to a report on Iron-Deficiency by the Medibank<a href=\"https://www.medibank.com.au/livebetter/introducing-the-medibank-better-health-index/\">Better Health Index</a>, more than one million Australians are anaemic. <a href=\"https://www.huffingtonpost.com.au/2016/12/28/iron-deficiency-among-young-aussie-women-is-on-the-rise_a_21643616/\">Young women aged 18-30 are typically among the worst affected</a> due to menstruation and pregnancy contributing to an increased requirement for iron in their body."
+    "html": "According to a report on Iron-Deficiency by the Medibank <a href=\"https://www.medibank.com.au/livebetter/introducing-the-medibank-better-health-index/\">Better Health Index</a>, more than one million Australians are anaemic. <a href=\"https://www.huffingtonpost.com.au/2016/12/28/iron-deficiency-among-young-aussie-women-is-on-the-rise_a_21643616/\">Young women aged 18-30 are typically among the worst affected</a> due to menstruation and pregnancy contributing to an increased requirement for iron in their body."
    },
    {
     "t": "p",
@@ -11215,7 +11215,7 @@
    },
    {
     "t": "p",
-    "html": "Apart from causing a probable<a href=\"https://www.healthline.com/health/earwax-buildup\">temporary loss of hearing</a>, a stubborn earwax is associated with a number of health issues. Let’s learn more about earwax and why you might need professional help for a removal treatment."
+    "html": "Apart from causing a probable <a href=\"https://www.healthline.com/health/earwax-buildup\">temporary loss of hearing</a>, a stubborn earwax is associated with a number of health issues. Let’s learn more about earwax and why you might need professional help for a removal treatment."
    },
    {
     "t": "img",
@@ -11237,7 +11237,7 @@
     "t": "ul",
     "items": [
      "Formation of ear wax is a natural process and when in excess it washes off itself.",
-     "Earache or <a href=\"https://www.healthline.com/health/tinnitus\">tinnitus</a>are some symptoms of ear wax build-up.",
+     "Earache or <a href=\"https://www.healthline.com/health/tinnitus\">tinnitus</a> are some symptoms of ear wax build-up.",
      "It is more common among older adults.",
      "Visiting your doctor regularly for an ear wax removal treatment can keep you risk-free from many medical conditions."
     ]
@@ -11423,7 +11423,7 @@
    },
    {
     "t": "p",
-    "html": "Along with high blood pressure, high blood sugar is another significant risk factor for kidney disease and kidney failures. Over time, the high sugar levels in your blood will start damaging millions<a href=\"https://www.betterhealth.vic.gov.au/health/conditionsandtreatments/diabetes-and-kidney-failure\">of tiny filtering units</a>, potentially giving way to kidney diseases."
+    "html": "Along with high blood pressure, high blood sugar is another significant risk factor for kidney disease and kidney failures. Over time, the high sugar levels in your blood will start damaging millions <a href=\"https://www.betterhealth.vic.gov.au/health/conditionsandtreatments/diabetes-and-kidney-failure\">of tiny filtering units</a>, potentially giving way to kidney diseases."
    },
    {
     "t": "h2",
@@ -11989,11 +11989,11 @@
    },
    {
     "t": "p",
-    "html": "For instance, a study concluded that almost<a href=\"https://respiratory-research.biomedcentral.com/articles/10.1186/s12931-018-0746-7\">one-third of the patients with uncontrolled asthma also had bronchiectasis</a>."
+    "html": "For instance, a study concluded that almost <a href=\"https://respiratory-research.biomedcentral.com/articles/10.1186/s12931-018-0746-7\">one-third of the patients with uncontrolled asthma also had bronchiectasis</a>."
    },
    {
     "t": "p",
-    "html": "Yet another study suggests<a href=\"https://erj.ersjournals.com/content/52/3/1800328\">the management of these overlapping conditions</a> remains particularly challenging in terms of treatment and diagnosis."
+    "html": "Yet another study suggests <a href=\"https://erj.ersjournals.com/content/52/3/1800328\">the management of these overlapping conditions</a> remains particularly challenging in terms of treatment and diagnosis."
    },
    {
     "t": "p",
@@ -12014,19 +12014,19 @@
    {
     "t": "ul",
     "items": [
-     "Family history – If you have a parent diagnosed with asthma, then you are<a href=\"https://www.lung.org/lung-health-diseases/lung-disease-lookup/asthma/asthma-symptoms-causes-risk-factors/asthma-risk-factors\">three to six times more likely to suffer from asthma</a> than someone without an asthmatic parent."
+     "Family history – If you have a parent diagnosed with asthma, then you are <a href=\"https://www.lung.org/lung-health-diseases/lung-disease-lookup/asthma/asthma-symptoms-causes-risk-factors/asthma-risk-factors\">three to six times more likely to suffer from asthma</a> than someone without an asthmatic parent."
     ]
    },
    {
     "t": "ul",
     "items": [
-     "Environments exposures – People when exposed to occupational pollution like chemicals, dust or gas, can<a href=\"https://www.mayoclinic.org/diseases-conditions/occupational-asthma/symptoms-causes/syc-20375772\">develop asthma for the first time</a>. And for people with asthma, exposure to such an environment can trigger asthmatic symptoms."
+     "Environments exposures – People when exposed to occupational pollution like chemicals, dust or gas, can <a href=\"https://www.mayoclinic.org/diseases-conditions/occupational-asthma/symptoms-causes/syc-20375772\">develop asthma for the first time</a>. And for people with asthma, exposure to such an environment can trigger asthmatic symptoms."
     ]
    },
    {
     "t": "ul",
     "items": [
-     "Air pollution – For people who grew up in urban areas, they are more likely to develop asthma. A study on asthma-related symptoms has found that the<a href=\"https://erj.ersjournals.com/content/17/3/422\">occurrence of asthma symptoms are consistently higher among young adults living in urban areas</a>."
+     "Air pollution – For people who grew up in urban areas, they are more likely to develop asthma. A study on asthma-related symptoms has found that the <a href=\"https://erj.ersjournals.com/content/17/3/422\">occurrence of asthma symptoms are consistently higher among young adults living in urban areas</a>."
     ]
    },
    {
@@ -12062,7 +12062,7 @@
    {
     "t": "ul",
     "items": [
-     "Autoimmune disease – Bronchiectasis is<a href=\"https://academic.oup.com/mmy/article/47/Supplement_1/S175/1071998\">associated with several autoimmune diseases</a> including Rheumatoid Arthritis, <a href=\"https://www.cdc.gov/lupus/facts/detailed.html\">Systemic Lupus Erythematosus</a> (SLE) and <a href=\"https://www.mayoclinic.org/diseases-conditions/sjogrens-syndrome/symptoms-causes/syc-20353216\">Sjogren’s Syndrome</a>."
+     "Autoimmune disease – Bronchiectasis is <a href=\"https://academic.oup.com/mmy/article/47/Supplement_1/S175/1071998\">associated with several autoimmune diseases</a> including Rheumatoid Arthritis, <a href=\"https://www.cdc.gov/lupus/facts/detailed.html\">Systemic Lupus Erythematosus</a> (SLE) and <a href=\"https://www.mayoclinic.org/diseases-conditions/sjogrens-syndrome/symptoms-causes/syc-20353216\">Sjogren’s Syndrome</a>."
     ]
    },
    {
@@ -12081,7 +12081,7 @@
    },
    {
     "t": "p",
-    "html": "For bronchiectasis, an X-ray of the chest is conducted to determine the cause of cough, a sputum test to see if you have<a href=\"https://www.mayoclinic.org/diseases-conditions/bronchitis/diagnosis-treatment/drc-20355572\">illnesses that could be helped with antibodies</a> and/or a lung function test similar to asthma diagnosis to measure your lung capacity"
+    "html": "For bronchiectasis, an X-ray of the chest is conducted to determine the cause of cough, a sputum test to see if you have <a href=\"https://www.mayoclinic.org/diseases-conditions/bronchitis/diagnosis-treatment/drc-20355572\">illnesses that could be helped with antibodies</a> and/or a lung function test similar to asthma diagnosis to measure your lung capacity"
    }
   ],
   "h1": "Asthma and bronchiectasis are overlapping lung diseases",
@@ -12151,7 +12151,7 @@
    },
    {
     "t": "p",
-    "html": "Nearly<a href=\"https://www.betterhealth.vic.gov.au/health/conditionsandtreatments/ageing-muscles-bones-and-joints#:~:text=Research%20shows%20that%3A,reduce%20the%20risk%20of%20falls.\">half of all Australians over the age of 75</a>, have some kind of disability that is directly related to weaker bone health and can be attributed to reduced physical activities."
+    "html": "Nearly <a href=\"https://www.betterhealth.vic.gov.au/health/conditionsandtreatments/ageing-muscles-bones-and-joints#:~:text=Research%20shows%20that%3A,reduce%20the%20risk%20of%20falls.\">half of all Australians over the age of 75</a>, have some kind of disability that is directly related to weaker bone health and can be attributed to reduced physical activities."
    },
    {
     "t": "p",
@@ -12179,11 +12179,11 @@
    },
    {
     "t": "p",
-    "html": "Including green leafy vegetables, dairy products such as yoghurts, milk and cheese in your diet are important to reaching the dietary need of calcium according to<a href=\"https://www.eatforhealth.gov.au/guidelines\">Australian standards</a>."
+    "html": "Including green leafy vegetables, dairy products such as yoghurts, milk and cheese in your diet are important to reaching the dietary need of calcium according to <a href=\"https://www.eatforhealth.gov.au/guidelines\">Australian standards</a>."
    },
    {
     "t": "p",
-    "html": "Vitamin D, on the other hand, absorbs calcium and extends supports to muscles required for stronger bones. You can include food like fatty fish, milk to your diet to get enough Vitamin D in your body including sunlight. This<a href=\"https://www.nof.org/patients/treatment/calciumvitamin-d/#:~:text=Vitamin%20D%20plays%20an%20important,their%20bones%20strong%20and%20healthy.\">guide</a>can be a great way to see how much Vitamin D is required for your body. Despite the fact we here in the “sunshine state” are blessed with plenty of sun, it is a great time to visit your GP regarding bone health."
+    "html": "Vitamin D, on the other hand, absorbs calcium and extends supports to muscles required for stronger bones. You can include food like fatty fish, milk to your diet to get enough Vitamin D in your body including sunlight. This <a href=\"https://www.nof.org/patients/treatment/calciumvitamin-d/#:~:text=Vitamin%20D%20plays%20an%20important,their%20bones%20strong%20and%20healthy.\">guide</a> can be a great way to see how much Vitamin D is required for your body. Despite the fact we here in the “sunshine state” are blessed with plenty of sun, it is a great time to visit your GP regarding bone health."
    },
    {
     "t": "h3",
@@ -12211,7 +12211,7 @@
    },
    {
     "t": "p",
-    "html": "To consult our doctors, you can book an<a href=\"https://sunstatefamilypractice.com.au/make-an-appointment/\">online appointment</a>or call us at<a href=\"tel:0732077744\">(07) 3207 7744</a>to speak to our staff for more information."
+    "html": "To consult our doctors, you can book an <a href=\"https://sunstatefamilypractice.com.au/make-an-appointment/\">online appointment</a> or call us at <a href=\"tel:0732077744\">(07) 3207 7744</a> to speak to our staff for more information."
    }
   ],
   "h1": "Healthy Bones Action Week 2020: Healthy bones for a better life",
@@ -12254,7 +12254,7 @@
    },
    {
     "t": "p",
-    "html": "For example, some common conditions like <a href=\"https://www.healthdirect.gov.au/differences-between-heart-disease-women-and-men\">cardiovascular disease affect</a>men and women differently. For example, a woman is more likely to die following her first heart attack, a man is less likely to die from the same reason."
+    "html": "For example, some common conditions like <a href=\"https://www.healthdirect.gov.au/differences-between-heart-disease-women-and-men\">cardiovascular disease affect</a> men and women differently. For example, a woman is more likely to die following her first heart attack, a man is less likely to die from the same reason."
    },
    {
     "t": "p",
@@ -12430,5 +12430,190 @@
    "clinic-news"
   ],
   "featured": "/assets/img/live/2021-01-webp-net-resizeimage-99.webp"
+ },
+ {
+  "path": "/clinic-privacy-policy/",
+  "url": "https://sunstatefamilypractice.com.au/wp-content/uploads/2025/08/Privacy-Policy-incl-AI.pdf",
+  "title": "Clinic Privacy Policy | Sunstate Family Practice",
+  "description": "How Sunstate Family Practice collects, uses, stores and shares your personal and health information, and how to access or correct it.",
+  "h1": "Clinic Privacy Policy",
+  "source": "Converted from the practice privacy policy PDF (reviewed 11.08.25); old PO Box replaced with the street address",
+  "blocks": [
+   {
+    "t": "h2",
+    "text": "Introduction",
+    "html": "Introduction"
+   },
+   {
+    "t": "p",
+    "html": "Sunstate Family Practice is committed to ensuring your personal information is professionally managed in accordance with the Australian Privacy Principles (APPs). This privacy policy explains how your personal information (including health information) is collected and used within our practice, and the circumstances in which it is shared with third parties."
+   },
+   {
+    "t": "h2",
+    "text": "What personal information we collect and why",
+    "html": "What personal information we collect and why"
+   },
+   {
+    "t": "p",
+    "html": "When you register as a patient of our practice, your doctor and/or their support team will need to collect personal information to provide you with quality healthcare services. We also use it for directly related business activities, such as financial claims and payments, practice audits/accreditation, and routine business processes. Only practice staff who need to see your personal information can access it. All staff have signed a Confidentiality Agreement as part of their employment contract."
+   },
+   {
+    "t": "p",
+    "html": "Personal information collected includes:"
+   },
+   {
+    "t": "ul",
+    "items": [
+     "Name, address, date of birth, contact details (including next of kin and emergency contact)",
+     "Medical information: medical history, medications, allergies, adverse events, immunisations, social history, family history, risk factors, and details of treatments or operations",
+     "Medicare or DVA numbers for identification and claiming purposes",
+     "Healthcare Identifiers",
+     "Health Fund Details",
+     "Pension, Health Care, and Senior Card numbers"
+    ]
+   },
+   {
+    "t": "h2",
+    "text": "How we collect your personal information",
+    "html": "How we collect your personal information"
+   },
+   {
+    "t": "p",
+    "html": "Our practice may collect your information in a range of ways:"
+   },
+   {
+    "t": "ol",
+    "items": [
+     "When you first make an appointment, our staff will ask you to complete our New Patient form.",
+     "During the course of providing medical services, including receiving records from previous practices and correspondence from other healthcare providers and My Health Record.",
+     "When you interact with us (website visits, email, phone calls, appointments, SMS reminders). Medical information is only communicated by email if you have given consent, as it is not secure.",
+     "If we cannot collect information directly from you, we may collect it from your guardian/responsible person, other healthcare providers, hospitals, community health services, diagnostic services, or similar sources."
+    ]
+   },
+   {
+    "t": "h2",
+    "text": "Dealing with us anonymously",
+    "html": "Dealing with us anonymously"
+   },
+   {
+    "t": "p",
+    "html": "You have the right to deal with us anonymously or under a pseudonym unless that would be impractical, or unless required by law to deal with identified individuals. Patients who do not provide identity documents must pay for consultations in full and are ineligible for a Medicare rebate."
+   },
+   {
+    "t": "h2",
+    "text": "When, why, and with whom we share your personal information",
+    "html": "When, why, and with whom we share your personal information"
+   },
+   {
+    "t": "p",
+    "html": "We may share your personal information in the following circumstances:"
+   },
+   {
+    "t": "ul",
+    "items": [
+     "With other healthcare providers, including third-party service providers such as IT and transcription vendors (including secure Artificial Intelligence (AI) transcription and documentation support systems).",
+     "With third parties who work with our practice for business-related purposes such as IT providers and accreditation agencies.",
+     "Where required by statutory law, such as mandatory notification of certain diseases.",
+     "Where necessary to prevent serious threats to a patient’s life, health, or safety, or to public health or safety, where it is impractical to obtain consent.",
+     "In response to court subpoenas or as otherwise authorised by law.",
+     "During the course of providing medical services (e.g., Electronic Transfer of Prescriptions, My Health Record System).",
+     "To assist in locating a missing person.",
+     "To establish, exercise or defend an equitable claim.",
+     "For confidential dispute resolution processes.",
+     "With third parties to whom you have given written consent, such as insurance companies, Workcover, and lawyers."
+    ]
+   },
+   {
+    "t": "p",
+    "html": "We will not use your personal information for direct marketing without your express consent. If you do consent, you may opt out at any time by notifying our practice in writing. We do not share your information outside Australia without your consent, unless required by law or under exceptional, legally permitted circumstances."
+   },
+   {
+    "t": "h2",
+    "text": "How we store and protect your personal information",
+    "html": "How we store and protect your personal information"
+   },
+   {
+    "t": "p",
+    "html": "Personal information is securely stored at our practice, primarily in electronic format. Any paper correspondence is scanned into your record, then shredded. Imaging such as X-rays, CT, and MRI scans are the patient’s responsibility and are generally not retained. Documented photos are stored electronically."
+   },
+   {
+    "t": "p",
+    "html": "Security measures include unique passwords, confidentiality agreements for all staff and contractors, and encrypted daily backups managed on-site and by IT consultants."
+   },
+   {
+    "t": "h2",
+    "text": "How we use Artificial Intelligence (AI)",
+    "html": "How we use Artificial Intelligence (AI)"
+   },
+   {
+    "t": "p",
+    "html": "Our practice may use a secure, healthcare-specific Artificial Intelligence (AI) platform during consultations solely as a listening tool for transcription purposes. The aim is to assist with medical documentation so your practitioner can focus on you during your consultation."
+   },
+   {
+    "t": "p",
+    "html": "Key points about AI use:"
+   },
+   {
+    "t": "ul",
+    "items": [
+     "The AI system is not used to deliver healthcare or make clinical decisions.",
+     "The AI platform complies with the Australian Privacy Principles (APPs) and the Privacy Act 1988 (Cth).",
+     "Identifiable health information is not stored by the AI provider beyond what is necessary to generate the transcript.",
+     "All transcripts and summaries generated by AI are reviewed and edited by your treating practitioner before they become part of your official medical record."
+    ]
+   },
+   {
+    "t": "h2",
+    "text": "How you can access and correct your personal information",
+    "html": "How you can access and correct your personal information"
+   },
+   {
+    "t": "p",
+    "html": "We take reasonable steps to correct personal information that is inaccurate or outdated. We may ask you to verify your information periodically."
+   },
+   {
+    "t": "p",
+    "html": "You have the right to access and correct your information. Requests should be made in writing to:"
+   },
+   {
+    "t": "p",
+    "html": "Practice Manager, Sunstate Family Practice, 127 Link Road, Victoria Point QLD 4165<br>Email: <a href=\"mailto:manager@sunstatefamilypractice.com.au\">manager@sunstatefamilypractice.com.au</a>"
+   },
+   {
+    "t": "p",
+    "html": "We will process your request within 30 days. Administrative or photocopying fees may apply."
+   },
+   {
+    "t": "h2",
+    "text": "How to lodge a privacy-related complaint",
+    "html": "How to lodge a privacy-related complaint"
+   },
+   {
+    "t": "p",
+    "html": "If you have concerns about privacy or wish to lodge a complaint about a breach, contact us in writing with full details and supporting information. We will investigate and notify you of the outcome within 30 days."
+   },
+   {
+    "t": "p",
+    "html": "If you are not satisfied, contact the Office of the Health Ombudsman:"
+   },
+   {
+    "t": "p",
+    "html": "Telephone: <a href=\"tel:133646\">133 646</a><br>Postal Address: GPO Box 13281, George Street, Brisbane QLD 4001<br>Email: <a href=\"mailto:complaints@oho.qld.gov.au\">complaints@oho.qld.gov.au</a><br>Website: <a href=\"https://www.oho.qld.gov.au\" target=\"_blank\" rel=\"noopener\">www.oho.qld.gov.au</a>"
+   },
+   {
+    "t": "h2",
+    "text": "Policy Review Statement",
+    "html": "Policy Review Statement"
+   },
+   {
+    "t": "p",
+    "html": "This Privacy Policy is regularly reviewed to ensure ongoing compliance with legislation and best practice guidance. Updates will be notified via our website or in-practice signage."
+   },
+   {
+    "t": "p",
+    "html": "Reviewed 11.08.25"
+   }
+  ],
+  "kind": "page"
  }
 ]

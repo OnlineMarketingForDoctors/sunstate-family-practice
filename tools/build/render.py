@@ -4,6 +4,7 @@ Content comes from the live WordPress site (content/live.json) as a flat list of
 These helpers turn those blocks into the editorial section layouts of the design system.
 """
 import html
+import os
 import itertools
 import re
 
@@ -20,15 +21,22 @@ REDIRECTS = {
 }
 
 
+DOCS = os.path.join(os.path.dirname(__file__), '..', '..', 'assets', 'docs')
+
+
 def e(s):
     return html.escape(s or '', quote=True)
 
 
 def local_href(href):
-    """Point links at the new pages; keep uploads (PDFs, forms) on the live server."""
+    """Point links at the new pages; uploads we host ourselves (assets/docs) are served locally."""
     if not href:
         return href
     href = href.replace('\u200b', '').replace('%e2%80%8b', '').replace('%E2%80%8B', '')
+    if '/wp-content/uploads/' in href:
+        name = href.rsplit('/', 1)[-1]
+        if os.path.exists(os.path.join(DOCS, name)):
+            return '/assets/docs/' + name
     m = LIVE_RE.match(href)
     if m:
         path = m.group(1) or '/'
@@ -522,7 +530,7 @@ def contact_form():
       <div class="field"><label for="cf-message">Message</label><textarea id="cf-message" name="message" rows="5" required></textarea><p class="field__error" id="cf-message-err">Enter your question or message.</p></div>
       <div class="field"><label for="cf-source">How did you hear about us?</label><select id="cf-source" name="heard_about_us" required><option value="" selected disabled>Choose one</option>{options}</select><p class="field__error" id="cf-source-err">Choose how you heard about us.</p></div>
       <input class="hp" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
-      <p class="contact__privacy">By sending this form you agree to us using your details to respond to your enquiry, in line with our <a href="https://sunstatefamilypractice.com.au/wp-content/uploads/2025/08/Privacy-Policy-incl-AI.pdf" target="_blank" rel="noopener">privacy policy</a>.</p>
+      <p class="contact__privacy">By sending this form you agree to us using your details to respond to your enquiry, in line with our <a href="/clinic-privacy-policy/">privacy policy</a>.</p>
       <button class="btn btn--green btn--lg contact__submit" type="submit">Send message</button>
       <div class="contact__status" role="status" aria-live="polite" data-form-status></div>
     </form>'''

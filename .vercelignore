@@ -2,6 +2,9 @@
 tools/
 *.docx
 *.pdf
+# public patient forms and leaflets linked from the site
+!assets/docs/
+!assets/docs/*.pdf
 *.zip
 CLAUDE.md
 .claude/

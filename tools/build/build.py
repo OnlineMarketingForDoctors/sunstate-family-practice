@@ -201,6 +201,7 @@ SERVICE_PAGES = {
         'img_swap': {'/assets/img/live/2026-06-tbm-instruct-1.webp': ('/assets/img/booking-phone.webp', 'Patient booking an appointment on her phone')},
     },
     '/ear-micro-suction/': {
+        'h1': 'Ear Micro Suction',
         'bg': '/assets/img/hero-ear.webp', 'chip': 'Performed by specially trained GPs', 'stmt_sat': '/assets/img/svc-ear.webp',
         'pool': ['/assets/img/live/2020-07-earwax-removal-is-benificial-for-hearning-health.webp', '/assets/img/visit-nurse.webp', '/assets/img/life-older.webp'],
         'crumb': [('Services', '/our-services/'), ('Ear Micro Suction', None)],
@@ -596,15 +597,17 @@ def build_about():
     <ol class="timeline">
       <li><span class="timeline__year">1993</span><div><h3>Dr Ganter graduates</h3><p>After graduating from the University of Queensland, Dr Andrew Ganter works at Greenslopes and Gold Coast Hospitals, then runs his own practice in Gladstone for 10 years.</p></div></li>
       <li><span class="timeline__year">2009</span><div><h3>Sunstate opens</h3><p>Dr Andrew and Helen Ganter establish Sunstate Family Practice on 1 September 2009, offering quality GP care to patients and a supportive practice for other GPs.</p></div></li>
-      <li><span class="timeline__year">Today</span><div><h3>A training practice</h3><p>Many of the registrars Dr Ganter has supervised have returned to work at Sunstate as part of our growing team.</p></div></li>
       <li><span class="timeline__year">2024</span><div><h3>A renovated home</h3><p>In November 2024 we moved into a renovated building with more consulting rooms and treatment areas.</p></div></li>
+      <li><span class="timeline__year">Today</span><div><h3>A training practice</h3><p>Many of the registrars Dr Ganter has supervised have returned to work at Sunstate as part of our growing team.</p></div></li>
     </ol>
   </div>
 </section>'''
     area_list = next(b for b in area if b['t'] == 'ul')
     links = {'Thornlands': 'thornlands-doctors', 'Cleveland': 'cleveland-doctors', 'Redland Bay': 'redland-bay-doctors', 'Sheldon': 'sheldon-doctors',
              'Capalaba': 'capalaba-doctors', 'Alexandra Hills': 'alexandra-hills-doctors', 'Wellington Point': 'wellington-point-doctors'}
-    chips = ''.join(f'<li><a href="/{links[re.sub("<[^>]+>", "", i).strip()]}/">{i}</a></li>' if re.sub('<[^>]+>', '', i).strip() in links else f'<li><span>{i}</span></li>' for i in area_list['items'])
+    # the live items carry their own links to the old domain, so link the plain suburb name instead
+    names = [re.sub('<[^>]+>', '', i).strip() for i in area_list['items']]
+    chips = ''.join(f'<li><a href="/{links[n]}/">{e(n)}</a></li>' if n in links else f'<li><span>{e(n)}</span></li>' for n in names)
     body = [page_hero('About Sunstate Family Practice', lead_html, '/assets/img/clinic-hallway.webp', [('About Us', None)], chip='AGPAL accredited'),
             quick_bar(),
             statement(before, '/assets/img/reception.webp', sat='/assets/img/visit-nurse.webp'),
@@ -683,7 +686,7 @@ def build_faqs():
         items.append(qa_item(q, i == 0).replace('<details', f'<details data-faq{f" id={chr(34)}{aid}{chr(34)}" if aid else ""}', 1))
     extra = [
         {'t': 'qa', 'q': 'Do you have female doctors?', 'a': [p('Yes. Many of our GPs are women, including doctors with interests in women’s health, antenatal care and children’s health. You can choose your doctor when you book online.')]},
-        {'t': 'qa', 'q': 'Do you bulk bill?', 'a': [p('Sunstate Family Practice is a private billing practice. Children 12 years and under are bulk billed for standard GP consultations between 8am and 5pm Monday to Friday. DVA Gold Card holders are bulk billed, as are health assessments, Chronic Condition Management Plans, home medication reviews and immunisations. <a href="/fees/">See our fees</a>.')]},
+        {'t': 'qa', 'q': 'Do you bulk bill?', 'a': [p('Sunstate Family Practice is a private billing practice. Children 12 years and under are bulk billed for standard GP consultations between 8am and 5pm Monday to Friday, excluding telehealth. DVA Gold Card holders are bulk billed, as are health assessments, Chronic Condition Management Plans, home medication reviews and immunisations. <a href="/fees/">See our fees</a>.')]},
     ]
     items.append(qa_item(extra[0]).replace('<details', '<details data-faq id="femaledoctors"', 1))
     items.insert(1, qa_item(extra[1]).replace('<details', '<details data-faq', 1))
@@ -1028,6 +1031,7 @@ def main():
     build_feedback()
     build_legal('/terms/', 'Terms of Use')
     build_legal('/privacy-policy/', 'Website Privacy Policy')
+    build_legal('/clinic-privacy-policy/', 'Clinic Privacy Policy')
     print(f'{len(WRITTEN)} pages written')
 
 

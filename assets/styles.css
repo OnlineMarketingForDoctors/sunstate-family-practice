@@ -895,6 +895,8 @@ body.has-lightbox { overflow: hidden; }
 .fp-glance__cards p { margin: 0; color: var(--stone); font-size: .9375rem; }
 .fp-glance__cards .fp-price { font-family: var(--f-display); font-weight: 900; font-size: 2.2rem; letter-spacing: -0.02em; color: var(--plum); margin: 6px 0 4px; }
 .fp-glance__cards .is-green { background: var(--green); }
+.fp-ast { color: inherit; text-decoration: none; font-size: .55em; vertical-align: super; margin-left: 2px; }
+.fp-glance__note { margin: 10px 4px 0; font-size: .875rem; color: var(--stone); }
 .fp-glance__cards .is-green h3, .fp-glance__cards .is-green .fp-price { color: #fff; }
 .fp-glance__cards .is-green p { color: rgba(255,255,255,.9); }
 .fp-jump { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 28px; }
