@@ -470,9 +470,9 @@ def build_suburb(path):
   <div class="wrap">
     <div class="getting__top">
       <div class="ps-head">{h2(getting_title)}<div class="ps-head__lead">{prose(lead)}</div>
-        <a class="btn btn--plum" href="https://www.google.com/maps/dir/?api=1&amp;origin={origin}&amp;destination=127+Link+Road+Victoria+Point+QLD+4165" target="_blank" rel="noopener">Directions from {e(sub["name"])}</a>
+        <a class="btn btn--plum" href="https://www.google.com/maps/dir/?api=1&amp;origin={origin}&amp;destination=Sunstate+Family+Practice+-+Skin+Cancer+Clinic+Victoria+Point" target="_blank" rel="noopener">Directions from {e(sub["name"])}</a>
       </div>
-      <figure class="getting__map"><iframe title="Map of Sunstate Family Practice, 127 Link Road, Victoria Point" src="https://maps.google.com/maps?q=127%20Link%20Road%2C%20Victoria%20Point%20QLD%204165&amp;z=14&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></figure>
+      <figure class="getting__map"><iframe title="Map of Sunstate Family Practice, 127 Link Road, Victoria Point" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1768.0!2d153.2947133!3d-27.5854425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b91661470a43153%3A0xec03dae4c86b0ad7!2sSunstate%20Family%20Practice%20-%20Skin%20Cancer%20Clinic%20Victoria%20Point!5e0!3m2!1sen!2sau!4v1795000000000!5m2!1sen!2sau" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></figure>
     </div>
     <div class="tcards">{cards}</div>
     {f'<div class="ps-after">{prose(tail)}</div>' if tail else ''}
@@ -862,7 +862,7 @@ def build_contact():
       </table>
       <p>All by Appointment. Some days, we will close earlier, depending on last patient, to support the well being of our staff.</p>
     </article>
-    <figure class="cc cc--map"><iframe title="Map of Sunstate Family Practice, 127 Link Road, Victoria Point" src="https://maps.google.com/maps?q=127%20Link%20Road%2C%20Victoria%20Point%20QLD%204165&amp;z=15&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></figure>
+    <figure class="cc cc--map"><iframe title="Map of Sunstate Family Practice, 127 Link Road, Victoria Point" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1768.0!2d153.2947133!3d-27.5854425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b91661470a43153%3A0xec03dae4c86b0ad7!2sSunstate%20Family%20Practice%20-%20Skin%20Cancer%20Clinic%20Victoria%20Point!5e0!3m2!1sen!2sau!4v1795000000000!5m2!1sen!2sau" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></figure>
   </div>
 </section>
 {contact_section('Send us a message')}
