@@ -132,11 +132,14 @@ def qa_item(b, open_=False):
             f'<div class="acc__body">{prose(b["a"])}</div></details>')
 
 
-def video_card(vid, label):
-    return (f'<button class="vcard" type="button" data-lightbox-open data-video-id="{vid}" aria-haspopup="dialog">'
-            f'<img src="https://i.ytimg.com/vi/{vid}/hqdefault.jpg" alt="" loading="lazy">'
+def video_card(vid, label, thumb=None):
+    """A thumbnail button that opens the video in the lightbox. A branded thumbnail already carries the name, so it drops the label."""
+    pic = thumb or f'https://i.ytimg.com/vi/{vid}/hqdefault.jpg'
+    tag = f'<span class="vcard__label">{e(label)}</span>' if not thumb else f'<span class="sr-only">{e(label)}</span>'
+    return (f'<button class="vcard{" vcard--branded" if thumb else ""}" type="button" data-lightbox-open data-video-id="{vid}" aria-haspopup="dialog">'
+            f'<img src="{e(pic)}" alt="" loading="lazy">'
             f'<span class="vcard__play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>'
-            f'<span class="vcard__label">{e(label)}</span></button>')
+            f'{tag}</button>')
 
 
 def crumbs(items):

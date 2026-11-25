@@ -493,7 +493,9 @@ def build_doctor(d):
     bio = [b for b in bs if b is not quals_block and b['t'] not in ('video', 'h4')]
     quals = re.sub(r'<[^>]+>', '', quals_block['html']).strip('() ') if quals_block else d['quals']
     first = d['name'].split()[-1]
-    video_html = f'<div class="doc-video">{video_card(vids[0], f"Meet {d["name"]}")}</div>' if vids else ''
+    thumb = f'/assets/img/video-thumbs/{d["photo"]}.webp'
+    thumb = thumb if os.path.exists(os.path.join(ROOT, thumb.lstrip('/'))) else None
+    video_html = f'<div class="doc-video">{video_card(vids[0], f"Meet {d["name"]}", thumb)}</div>' if vids else ''
     others = [x for x in S.DOCTORS if x is not d]
     note = f'<p class="doc-hero__note">{e(d["note"])}</p>' if d.get('note') else ''
     body = f'''
