@@ -2275,8 +2275,25 @@
    },
    {
     "t": "qa",
-    "q": "What do I need to do if I move, or if my doctor moves?",
-    "a": []
+    "q": "What happens to my medical records if I move or my doctor leaves?",
+    "a": [
+     {
+      "t": "p",
+      "html": "<strong>If you move or change practices</strong>"
+     },
+     {
+      "t": "p",
+      "html": "Once you’ve chosen a new GP, ask your new practice for a medical records transfer form. Complete and sign it, and ask them to send it to us. Once we receive your request, we’ll send a copy of your medical records to your new practice."
+     },
+     {
+      "t": "p",
+      "html": "<strong>If your doctor leaves Sunstate Family Practice</strong>"
+     },
+     {
+      "t": "p",
+      "html": "Your medical records stay with us. You’re welcome to continue your care with another doctor at Sunstate, who can access your existing records. If you’d prefer to follow your doctor to their new practice, ask that practice for a transfer form and follow the same steps above."
+     }
+    ]
    },
    {
     "t": "qa",
@@ -2332,11 +2349,23 @@
    },
    {
     "t": "qa",
-    "q": "How do I receive my results?",
+    "q": "How do I get my test results?",
     "a": [
      {
       "t": "p",
-      "html": "An appointment should be made to discuss results unless your doctor has directed you otherwise. Fees are payable for these appointments."
+      "html": "When your doctor orders a test, ask when the results are expected and when to book a follow-up. We encourage you to discuss your results with the doctor who ordered the test so you can understand what they mean and what to do next."
+     },
+     {
+      "t": "p",
+      "html": "If you’re still feeling unwell or your symptoms are getting worse, please contact us for a review appointment, even if your results are normal. If you haven’t heard from us by the time your results were expected, please call reception on <a href=\"tel:0732077744\">(07) 3207 7744</a>."
+     },
+     {
+      "t": "p",
+      "html": "If your doctor wants to see you about a result, we’ll contact you by HotDoc text message, phone or email. Please keep your contact details up to date."
+     },
+     {
+      "t": "p",
+      "html": "We know another visit can be hard to fit in, so telehealth is available when clinically appropriate. Reception can explain your appointment options and any fees when you book."
      }
     ]
    },
